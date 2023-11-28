@@ -2,17 +2,21 @@ import type { Metadata } from 'next'
 import { Poppins, Outfit } from 'next/font/google'
 
 import StyledComponentsRegistry from './lib/registry'
+import { Wrapper } from './components/wrapper'
+import { GlobalCss } from './style/global'
 
 export const poppins = Poppins({
   subsets: ['latin'],
   weight: ['100', '400', '500', '600'],
-  style: ['italic', 'normal']
+  style: ['italic', 'normal'],
+  variable: '--font-poppins'
 })
 
 export const outfit = Outfit({
   subsets: ['latin'],
   weight: ['100', '400', '500', '600'],
-  style: ['normal']
+  style: ['normal'],
+  variable: '--font-outfit'
 })
 
 export const metadata: Metadata = {
@@ -28,7 +32,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={outfit.className}>
-        <StyledComponentsRegistry>{children}</StyledComponentsRegistry>
+        <StyledComponentsRegistry>
+          <Wrapper>
+            <GlobalCss />
+            {children}
+          </Wrapper>
+        </StyledComponentsRegistry>
       </body>
     </html>
   )
