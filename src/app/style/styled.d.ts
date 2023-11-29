@@ -3,7 +3,7 @@ import { Theme } from './theme'
 
 declare module 'styled-components' {
   export interface DefaultTheme {
-    colors?: {
+    colors: {
       primary: string
       secondary: string
     }
@@ -13,6 +13,6 @@ declare module 'styled-components' {
         secondary: string
       }
     }
-    theme?: Theme
+    theme: Theme
   }
 }

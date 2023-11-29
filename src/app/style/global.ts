@@ -15,8 +15,8 @@ export const GlobalCss = createGlobalStyle`
 
       body {
         font-style: ${theme.fonts.style.primary};
-        background-color: ${theme.colors?.primary};
-        color: ${theme.colors?.secondary};
+        background-color: ${theme.colors.primary};
+        color: ${theme.colors.secondary};
         transition: all 200ms ease-in;
       }
     `}

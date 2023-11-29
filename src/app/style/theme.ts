@@ -5,7 +5,9 @@ export enum Theme {
   DARK = 'DARK'
 }
 
-const theme: DefaultTheme = {
+type StandardTheme = Pick<DefaultTheme, 'fonts'>
+
+const theme: StandardTheme = {
   fonts: {
     style: {
       primary: 'var(--font-outfit)',
