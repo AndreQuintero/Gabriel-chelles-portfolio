@@ -15,8 +15,8 @@ export const Wrapper = ({ children }: Props) => {
   const theme = () => (themeType === Theme.LIGHT ? lightTheme : darkTheme)
   return (
     <ThemeProvider theme={theme()}>
-      <button onClick={toggleTheme}>change theme</button>
       {children}
+      <button onClick={toggleTheme}>change theme</button>
     </ThemeProvider>
   )
 }
