@@ -4,6 +4,7 @@ import { Poppins, Outfit } from 'next/font/google'
 import StyledComponentsRegistry from './lib/registry'
 import { Wrapper } from './components/wrapper'
 import { GlobalCss } from './style/global'
+import { Menu } from './components/menu'
 
 export const poppins = Poppins({
   subsets: ['latin'],
@@ -35,6 +36,7 @@ export default function RootLayout({
         <StyledComponentsRegistry>
           <Wrapper>
             <GlobalCss />
+            <Menu />
             {children}
           </Wrapper>
         </StyledComponentsRegistry>
