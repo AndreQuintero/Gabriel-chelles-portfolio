@@ -1,9 +1,15 @@
-import { Text } from './components/test'
+import { Footer } from './components/footer'
+import { Hero } from './templates/home/hero'
+import { Projects } from './templates/home/projects'
+import { Video } from './templates/home/video'
 
 export default function Home() {
   return (
     <main>
-      <Text>Hello</Text>
+      <Hero />
+      <Video />
+      <Projects />
+      <Footer />
     </main>
   )
 }
