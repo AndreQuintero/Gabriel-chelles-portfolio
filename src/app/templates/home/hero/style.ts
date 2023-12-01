@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion'
 import styled, { css } from 'styled-components'
 import media from 'styled-media-query'
 
@@ -8,7 +9,7 @@ export const HeroSection = styled.section`
     `}
 `
 
-export const Apresentation = styled.h2`
+export const Apresentation = styled(motion.h2)`
   ${({ theme }) => css`
     font-family: ${theme.fonts.style.primary};
     font-size: 1.8rem;
@@ -22,7 +23,7 @@ export const Name = styled.span`
   font-weight: 600;
 `
 
-export const Description = styled.h1`
+export const Description = styled(motion.h1)`
   ${({ theme }) => css`
     margin-top: 2.4rem;
     font-family: ${theme.fonts.style.primary};
@@ -38,4 +39,16 @@ export const Description = styled.h1`
 
 export const Highlight = styled.span`
   color: #1a70d0;
+`
+export const Buttons = styled(motion.div)`
+  display: flex;
+  flex-direction: column;
+  margin-top: 4.8rem;
+  gap: 1.6rem;
+
+  ${media.greaterThan('medium')`
+    flex-direction: row;
+    gap: 2.4rem;
+    margin-top: 6.4rem;
+  `}
 `
