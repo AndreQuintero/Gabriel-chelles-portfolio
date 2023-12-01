@@ -3,16 +3,20 @@ import styled, { css } from 'styled-components'
 import media from 'styled-media-query'
 
 export const Header = styled.header`
-  display: flex;
-  width: 100%;
-  padding: 1.6rem;
-  justify-content: space-between;
-  align-items: center;
-  position: sticky;
-  top: 0;
-  z-index: 10;
-  ${media.greaterThan('medium')`
+  ${({ theme }) => css`
+    display: flex;
+    width: 100%;
+    padding: 1.6rem;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    background-color: ${theme.colors.primary};
+    top: 0;
+    z-index: 10;
+    transition: all 200ms ease-in;
+    ${media.greaterThan('medium')`
     padding: 2.4rem 4.8rem;
+  `}
   `}
 `
 
