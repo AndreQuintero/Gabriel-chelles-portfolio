@@ -13,6 +13,7 @@ export const Wrapper = styled(motion.section)`
   iframe {
     width: 100%;
     height: 46.4rem;
+    border: none;
 
     ${media.greaterThan('medium')`
         height: 72rem;
