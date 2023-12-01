@@ -20,7 +20,9 @@ const Menu = () => {
     <>
       <S.Header>
         <S.PortfolioName>Gabriel Chelles</S.PortfolioName>
-        {!isMobile && <Navigation isMobile={isMobile} />}
+        {!isMobile && isMobile !== undefined && (
+          <Navigation isMobile={isMobile} />
+        )}
         {isMobile && (
           <div onClick={toggleMenu}>
             {!isMenuVisible ? (
@@ -42,7 +44,7 @@ const MenuMobile = () => {
       key="menu"
       initial={{ opacity: 0, y: -200 }}
       animate={{ opacity: 1, y: 0 }}
-      transition={{ delay: 0.2, ease: 'easeIn' }}
+      transition={{ delay: 0.1, ease: 'easeIn' }}
       exit={{ opacity: 0, y: -200 }}>
       <Navigation isMobile />
     </S.MenuMobile>
