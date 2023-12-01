@@ -10,7 +10,7 @@ export const Container = ({
   children,
   ignorePaddingOnMobile = false
 }: ContainerProps) => (
-  <S.Container ignorePaddingOnMobile={ignorePaddingOnMobile}>
+  <S.Container $ignorePaddingOnMobile={ignorePaddingOnMobile}>
     {children}
   </S.Container>
 )
