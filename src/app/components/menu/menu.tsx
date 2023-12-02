@@ -1,7 +1,7 @@
 'use client'
 import { useTheme } from 'styled-components'
 import { useState } from 'react'
-import { AnimatePresence, delay, motion } from 'framer-motion'
+import { AnimatePresence } from 'framer-motion'
 
 import { useViewDetect } from '@/app/hooks/useViewDetect'
 import * as S from './style'
