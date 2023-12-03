@@ -1,6 +1,6 @@
 'use client'
 import { Container } from '@/app/components/container'
-import { ProjectImage } from '@/app/components/project-image'
+import { ProjectCard } from '@/app/components/project-card'
 
 const imgs = [
   {
@@ -32,7 +32,11 @@ const imgs = [
 export const Projects = () => {
   return (
     <Container>
-      <ProjectImage images={imgs} />
+      <ProjectCard
+        images={imgs}
+        slug="shopping"
+        title="Marketplace para Shopping Iguatemi Fortaleza"
+      />
     </Container>
   )
 }
