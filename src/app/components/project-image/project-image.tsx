@@ -3,11 +3,7 @@
 import * as S from './style'
 import { CustomCursor, WithCustomCursor } from '../custom-cursor'
 import { useRef, useState } from 'react'
-
-type ImageProps = {
-  url: string
-  description: string
-}
+import { ImageProps } from '../project-card'
 
 type ProjectImageProps = {
   images: Array<ImageProps>
