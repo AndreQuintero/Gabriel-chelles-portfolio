@@ -1,0 +1,22 @@
+import { ProjectImage } from '../project-image'
+import * as S from './style'
+
+export type ImageProps = {
+  url: string
+  description: string
+}
+
+type ProjectCardProps = {
+  title: string
+  slug: string
+  images: Array<ImageProps>
+}
+
+export const ProjectCard = ({ title, slug, images }: ProjectCardProps) => {
+  return (
+    <S.Wrapper href={`#${slug}`}>
+      <ProjectImage images={images} />
+      <S.Title>{title}</S.Title>
+    </S.Wrapper>
+  )
+}
