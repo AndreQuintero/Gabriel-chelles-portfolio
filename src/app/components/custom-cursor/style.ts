@@ -11,6 +11,7 @@ export const Cursor = styled.div`
     border-radius: 50%;
     position: absolute;
     pointer-events: none;
+    z-index: 9;
 
     label {
       color: #252525;
