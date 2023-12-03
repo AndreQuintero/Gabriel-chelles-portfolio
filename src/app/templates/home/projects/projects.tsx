@@ -1,6 +1,6 @@
 'use client'
 import { Container } from '@/app/components/container'
-import { ProjectCard } from '@/app/components/project-card'
+import { ProjectImage } from '@/app/components/project-image'
 
 const imgs = [
   {
@@ -32,7 +32,7 @@ const imgs = [
 export const Projects = () => {
   return (
     <Container>
-      <ProjectCard images={imgs} />
+      <ProjectImage images={imgs} />
     </Container>
   )
 }

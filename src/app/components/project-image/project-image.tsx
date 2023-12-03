@@ -9,14 +9,14 @@ type ImageProps = {
   description: string
 }
 
-type ProjectCardProps = {
+type ProjectImageProps = {
   images: Array<ImageProps>
 } & CustomCursor
 
-const ProjectCard = ({ onMouseMove, images }: ProjectCardProps) => {
+const ProjectImage = ({ onMouseMove, images }: ProjectImageProps) => {
   const [activeIndex, setActiveIndex] = useState(0)
   const intervalRef = useRef<NodeJS.Timeout | null>(null)
-  const SCREEN_TIME = 1000
+  const SCREEN_TIME = 500
 
   const handleImagesWhenHoverit = () => {
     intervalRef.current = setInterval(() => {
@@ -63,4 +63,4 @@ const ProjectCard = ({ onMouseMove, images }: ProjectCardProps) => {
   )
 }
 
-export default WithCustomCursor(ProjectCard)
+export default WithCustomCursor(ProjectImage)
