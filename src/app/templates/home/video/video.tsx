@@ -14,9 +14,9 @@ export const Video = () => {
         <iframe
           width="560"
           height="315"
-          src="https://www.youtube.com/embed/voTI0qi5dLU?si=M96Fv0HsjBk-66yQ"
+          src="https://www.youtube.com/embed/voTI0qi5dLU?si=M96Fv0HsjBk-66yQ&autoplay=1&mute=1"
           title="YouTube video player"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; mute"
           allowFullScreen></iframe>
       </S.Wrapper>
     </Container>
