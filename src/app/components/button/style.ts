@@ -53,9 +53,9 @@ const btnDark = () => css`
 `
 
 export const Button = styled.button<{
-  type: 'primary' | 'secondary'
+  $colorScheme: 'primary' | 'secondary'
 }>`
-  ${({ theme, type }) => css`
+  ${({ theme, $colorScheme }) => css`
     font-family: ${theme.fonts.style.secondary};
     font-size: 1.6rem;
     font-weight: 400;
@@ -68,6 +68,6 @@ export const Button = styled.button<{
     appearance: none;
     transition: all 0.2s ease-in;
     cursor: pointer;
-    ${variants[type](theme)}
+    ${variants[$colorScheme](theme)}
   `}
 `
