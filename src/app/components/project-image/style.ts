@@ -5,10 +5,11 @@ import media from 'styled-media-query'
 
 export const Wrapper = styled.div`
   width: 100%;
-  height: 63.2rem;
+  height: 35.4rem;
   position: relative;
   ${media.greaterThan('medium')`
       width: 58.6rem;
+      height: 63.2rem;
   `}
 `
 
