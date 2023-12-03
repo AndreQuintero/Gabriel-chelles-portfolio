@@ -29,10 +29,10 @@ export const Hero = () => {
           initial="hidden"
           whileInView="show"
           viewport={{ once: true }}>
-          <Button type="primary" icon="linkedin">
+          <Button colorScheme="primary" icon="linkedin">
             /gabrielChelles
           </Button>
-          <Button type="primary" icon="download">
+          <Button colorScheme="primary" icon="download">
             Download CV
           </Button>
         </S.Buttons>
