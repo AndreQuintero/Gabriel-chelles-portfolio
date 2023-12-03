@@ -6,8 +6,10 @@ export type CustomCursor = {
   onMouseMove: (e: MouseEvent<HTMLDivElement>) => void
 }
 
-export const WithCustomCursor = (Component: ComponentType<CustomCursor>) => {
-  return function HOC() {
+export const WithCustomCursor = <P extends CustomCursor>(
+  Component: ComponentType<P>
+) => {
+  return function HOC(props: Omit<P, keyof CustomCursor>) {
     const cursor = useRef<HTMLDivElement>(null)
 
     const mouseMove = (e: MouseEvent<HTMLDivElement>) => {
@@ -42,7 +44,7 @@ export const WithCustomCursor = (Component: ComponentType<CustomCursor>) => {
         <S.Cursor ref={cursor}>
           <label> Ver mais </label>
         </S.Cursor>
-        <Component onMouseMove={mouseMove} />
+        <Component {...(props as P)} onMouseMove={mouseMove} />
       </S.Wrapper>
     )
   }
