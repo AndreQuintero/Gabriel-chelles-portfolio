@@ -17,12 +17,14 @@ export const Title = styled.h4`
 `
 
 export const Wrapper = styled.a`
+  display: block;
+  width: 100%;
   text-decoration: none;
   &:hover h4 {
     text-decoration: underline;
   }
 
   ${media.greaterThan('medium')`
-    display: table-caption;
+    width: 58.6rem;
   `}
 `
