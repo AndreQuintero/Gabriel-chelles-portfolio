@@ -1,6 +1,11 @@
 'use client'
+
 import { Container } from '@/app/components/container'
 import { ProjectCard } from '@/app/components/project-card'
+
+import * as S from './style'
+import { Button } from '@/app/components/button'
+import { fadeIn } from '@/app/motion'
 
 const imgs = [
   {
@@ -31,12 +36,58 @@ const imgs = [
 
 export const Projects = () => {
   return (
-    <Container>
-      <ProjectCard
-        images={imgs}
-        slug="shopping"
-        title="Marketplace para Shopping Iguatemi Fortaleza"
-      />
-    </Container>
+    <S.Wrapper>
+      <Container>
+        <S.MosaicGrid>
+          <S.ProjectCardWrapper
+            variants={fadeIn(0.3)}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true }}>
+            <ProjectCard
+              images={imgs}
+              slug="shopping"
+              title="Marketplace para Shopping Iguatemi Fortaleza"
+            />
+          </S.ProjectCardWrapper>
+          <S.ProjectCardWrapper
+            variants={fadeIn(0.3)}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true }}>
+            <ProjectCard
+              images={imgs}
+              slug="shopping"
+              title="Marketplace para Shopping Iguatemi Fortaleza"
+            />
+          </S.ProjectCardWrapper>
+          <S.ProjectCardWrapper
+            variants={fadeIn(0.3)}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true }}>
+            <ProjectCard
+              images={imgs}
+              slug="shopping"
+              title="Marketplace para Shopping Iguatemi Fortaleza"
+            />
+          </S.ProjectCardWrapper>
+          <S.ProjectCardWrapper
+            variants={fadeIn(0.3)}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true }}>
+            <ProjectCard
+              images={imgs}
+              slug="shopping"
+              title="Marketplace para Shopping Iguatemi Fortaleza"
+            />
+          </S.ProjectCardWrapper>
+        </S.MosaicGrid>
+        <S.MoreProjects>
+          <Button colorScheme="secondary">Ver todos os 12 projetos</Button>
+        </S.MoreProjects>
+      </Container>
+    </S.Wrapper>
   )
 }
