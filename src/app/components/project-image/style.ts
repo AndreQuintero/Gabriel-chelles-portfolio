@@ -8,7 +8,6 @@ export const Wrapper = styled.div`
   height: 35.4rem;
   position: relative;
   ${media.greaterThan('medium')`
-      width: 58.6rem;
       height: 63.2rem;
   `}
 `
