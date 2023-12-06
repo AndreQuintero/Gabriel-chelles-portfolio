@@ -6,6 +6,7 @@ declare module 'styled-components' {
     colors: {
       primary: string
       secondary: string
+      tertiary: string
     }
     fonts: {
       style: {
@@ -14,5 +15,6 @@ declare module 'styled-components' {
       }
     }
     theme: Theme
+    transition: string
   }
 }
