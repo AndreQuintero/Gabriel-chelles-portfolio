@@ -40,15 +40,10 @@ export const Description = styled(motion.h1)`
 export const Highlight = styled.span`
   color: #1a70d0;
 `
-export const Buttons = styled(motion.div)`
-  display: flex;
-  flex-direction: column;
+export const SocialWrapper = styled(motion.div)`
   margin-top: 4.8rem;
-  gap: 1.6rem;
 
   ${media.greaterThan('medium')`
-    flex-direction: row;
-    gap: 2.4rem;
     margin-top: 6.4rem;
   `}
 `
