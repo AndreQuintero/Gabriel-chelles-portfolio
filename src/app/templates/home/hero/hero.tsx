@@ -1,8 +1,8 @@
 'use client'
 import { Container } from '@/app/components/container'
 import * as S from './style'
-import { Button } from '@/app/components/button'
 import { fadeIn } from '@/app/motion'
+import { Social } from '@/app/components/social'
 
 export const Hero = () => {
   return (
@@ -24,18 +24,13 @@ export const Hero = () => {
           <S.Highlight> Gamers Club </S.Highlight> a se tornar a maior empresa
           de esports do mundo!🤘
         </S.Description>
-        <S.Buttons
+        <S.SocialWrapper
           variants={fadeIn(0.6)}
           initial="hidden"
           whileInView="show"
           viewport={{ once: true }}>
-          <Button colorScheme="primary" icon="linkedin">
-            /gabrielChelles
-          </Button>
-          <Button colorScheme="primary" icon="download">
-            Download CV
-          </Button>
-        </S.Buttons>
+          <Social />
+        </S.SocialWrapper>
       </Container>
     </S.HeroSection>
   )
