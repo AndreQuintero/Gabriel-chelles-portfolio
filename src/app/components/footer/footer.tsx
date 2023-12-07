@@ -1,5 +1,6 @@
 'use client'
 
+import { ChangeTheme } from '../change-theme'
 import { Contact } from '../contact'
 import { Container } from '../container'
 import { Showcase } from '../showcase'
@@ -59,21 +60,24 @@ const companies = [
 export const Footer = () => {
   return (
     <S.Footer>
-      <Container>
-        <S.Title>
-          Trabalho com design para produtos digitais desde 2015 e sou um
-          defensor de experiências simples, intuitivas e agradáveis!
-        </S.Title>
-        <S.Showcase>
-          Algumas empresas que tive a oportunidade e o prazer de colaborar
-        </S.Showcase>
-      </Container>
-      <Showcase companies={companies} />
-      <Container>
-        <S.ContactWrapper>
-          <Contact />
-        </S.ContactWrapper>
-      </Container>
+      <ChangeTheme>
+        <Container>
+          <S.Title>
+            Trabalho com design para produtos digitais desde 2015 e sou um
+            defensor de experiências simples, intuitivas e agradáveis!
+          </S.Title>
+
+          <S.Showcase>
+            Algumas empresas que tive a oportunidade e o prazer de colaborar
+          </S.Showcase>
+        </Container>
+        <Showcase companies={companies} />
+        <Container>
+          <S.ContactWrapper>
+            <Contact />
+          </S.ContactWrapper>
+        </Container>
+      </ChangeTheme>
     </S.Footer>
   )
 }
