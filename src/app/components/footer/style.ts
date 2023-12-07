@@ -6,7 +6,7 @@ export const Footer = styled.footer`
     padding-top: 6.4rem;
     padding-bottom: 6.4rem;
     background-color: ${theme.colors.tertiary};
-    transition: all 0.2s ease-in;
+    transition: ${theme.transition};
 
     ${media.greaterThan('medium')`
     padding-top: 12.8rem;

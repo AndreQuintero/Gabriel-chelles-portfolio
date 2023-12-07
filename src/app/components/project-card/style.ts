@@ -8,6 +8,7 @@ export const Title = styled.h4`
     font-size: 2.4rem;
     color: ${theme.colors.secondary};
     font-weight: 400;
+    transition: ${theme.transition};
 
     ${media.greaterThan('medium')`
       margin-top: 3.2rem;

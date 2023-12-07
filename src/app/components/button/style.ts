@@ -3,21 +3,21 @@ import styled, { DefaultTheme, css } from 'styled-components'
 
 const variants = {
   primary: (theme: DefaultTheme) => css`
-    ${theme.theme === Theme.LIGHT ? btnLight() : btnDark()}
+    ${theme.theme === Theme.LIGHT ? btnLight(theme) : btnDark(theme)}
   `,
   secondary: (theme: DefaultTheme) => css`
-    ${theme.theme === Theme.LIGHT ? btnDark() : btnLight()}
+    ${theme.theme === Theme.LIGHT ? btnDark(theme) : btnLight(theme)}
   `
 }
 
-const btnLight = () => css`
+const btnLight = (theme: DefaultTheme) => css`
   background-color: #f8f8f8;
   color: #010001;
   border: 1px solid #000;
 
   svg > path {
     fill: #010001;
-    transition: all 0.2s ease-in;
+    transition: ${theme.transition};
   }
 
   &:hover {
@@ -31,14 +31,14 @@ const btnLight = () => css`
   }
 `
 
-const btnDark = () => css`
+const btnDark = (theme: DefaultTheme) => css`
   background-color: #010001;
   color: #fff;
   border: 1px solid #f8f8f8;
 
   svg > path {
     fill: #fff;
-    transition: all 0.2s ease-in;
+    transition: ${theme.transition};
   }
 
   &:hover {
@@ -66,7 +66,7 @@ export const Button = styled.button<{
     align-items: center;
     gap: 8px;
     appearance: none;
-    transition: all 0.2s ease-in;
+    transition: ${theme.transition};
     cursor: pointer;
     ${variants[$colorScheme](theme)}
   `}
