@@ -5,6 +5,8 @@ import StyledComponentsRegistry from './lib/registry'
 import { Wrapper } from './components/wrapper'
 import { GlobalCss } from './style/global'
 import { Menu } from './components/menu'
+import { ThemeProvider } from './providers/ThemeProvider'
+import { Footer } from './components/footer'
 
 export const poppins = Poppins({
   subsets: ['latin'],
@@ -34,11 +36,14 @@ export default function RootLayout({
     <html lang="en">
       <body className={outfit.className}>
         <StyledComponentsRegistry>
-          <Wrapper>
-            <GlobalCss />
-            <Menu />
-            {children}
-          </Wrapper>
+          <ThemeProvider>
+            <Wrapper>
+              <GlobalCss />
+              <Menu />
+              {children}
+              <Footer />
+            </Wrapper>
+          </ThemeProvider>
         </StyledComponentsRegistry>
       </body>
     </html>
