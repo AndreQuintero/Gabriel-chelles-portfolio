@@ -1,6 +1,6 @@
 'use client'
 import { useTheme } from 'styled-components'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { AnimatePresence } from 'framer-motion'
 
 import { useViewDetect } from '@/app/hooks/useViewDetect'
@@ -8,6 +8,7 @@ import * as S from './style'
 
 import { Navigation } from './navigation'
 import { MenuIconOpened, MenuItemClosed } from './menu-icon'
+import { Contact } from '../contact'
 
 const Menu = () => {
   const { isMobile } = useViewDetect()
@@ -16,6 +17,9 @@ const Menu = () => {
 
   const toggleMenu = () => setIsMenuVisible(!isMenuVisible)
 
+  useEffect(() => {
+    document.body.style.overflow = isMenuVisible ? 'hidden' : 'visible'
+  }, [isMenuVisible])
   return (
     <>
       <S.Header>
@@ -47,6 +51,9 @@ const MenuMobile = () => {
       transition={{ delay: 0.1, ease: 'easeIn' }}
       exit={{ opacity: 0, y: -200 }}>
       <Navigation isMobile />
+      <S.ContactWrapper>
+        <Contact />
+      </S.ContactWrapper>
     </S.MenuMobile>
   )
 }

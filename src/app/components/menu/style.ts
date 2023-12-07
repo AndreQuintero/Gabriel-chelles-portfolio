@@ -36,5 +36,17 @@ export const MenuMobile = styled(motion.menu)`
     background-color: ${theme.colors.primary};
     position: fixed;
     z-index: 9;
+    display: flex; /* flex-wrap: wrap; */
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    transition: background-color 200ms ease-in;
   `}
+`
+export const ContactWrapper = styled.div`
+  border-top: 1px solid #393939;
+  width: 100%;
+  padding: 1.6rem;
+  padding-top: 3.2rem;
+  padding-bottom: 6.7rem;
 `
