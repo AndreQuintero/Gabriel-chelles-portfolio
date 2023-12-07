@@ -1,4 +1,3 @@
-import { Footer } from './components/footer'
 import { Hero } from './templates/home/hero'
 import { Projects } from './templates/home/projects'
 import { Video } from './templates/home/video'
@@ -9,7 +8,6 @@ export default function Home() {
       <Hero />
       <Video />
       <Projects />
-      <Footer />
     </main>
   )
 }
