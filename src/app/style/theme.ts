@@ -14,7 +14,7 @@ const theme: StandardTheme = {
       secondary: 'var(--font-poppins)'
     }
   },
-  transition: 'all 0.2s ease-in;'
+  transition: 'background-color 0.2s ease-in'
 }
 
 export const lightTheme: DefaultTheme = {
