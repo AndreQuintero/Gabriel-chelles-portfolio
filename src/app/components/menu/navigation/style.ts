@@ -1,10 +1,7 @@
 import styled, { css } from 'styled-components'
 import media from 'styled-media-query'
-export const Nav = styled.nav`
-  ${media.lessThan('medium')`
-    height: 100%;
-  `}
-`
+
+export const Nav = styled.nav``
 
 export const LinksList = styled.ul`
   list-style-type: none;
