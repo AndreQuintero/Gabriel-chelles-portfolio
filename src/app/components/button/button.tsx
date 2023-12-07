@@ -1,14 +1,24 @@
 'use client'
-import { ButtonHTMLAttributes, DetailedHTMLProps, ReactNode } from 'react'
+import {
+  AnchorHTMLAttributes,
+  ButtonHTMLAttributes,
+  ElementType,
+  ReactNode
+} from 'react'
 import * as S from './style'
 
 import { DownloadIcon, LinkedinIcon } from '@/app/assets/icons'
+
+type ButtonTypes =
+  | AnchorHTMLAttributes<HTMLAnchorElement>
+  | ButtonHTMLAttributes<HTMLButtonElement>
 
 type ButtonProps = {
   children: ReactNode
   colorScheme: 'primary' | 'secondary'
   icon?: 'linkedin' | 'download'
-} & ButtonHTMLAttributes<HTMLButtonElement>
+  as?: ElementType
+} & ButtonTypes
 
 const Icons = {
   linkedin: <LinkedinIcon />,
@@ -27,5 +37,3 @@ export const Button = ({
     </S.Button>
   )
 }
-
-type IconProps = { color: string }

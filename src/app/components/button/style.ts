@@ -59,7 +59,7 @@ export const Button = styled.button<{
     font-family: ${theme.fonts.style.secondary};
     font-size: 1.6rem;
     font-weight: 400;
-
+    text-decoration: none;
     display: inline-flex;
     padding: 0.8rem 3.2rem;
     justify-content: center;
