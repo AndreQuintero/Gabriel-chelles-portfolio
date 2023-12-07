@@ -27,7 +27,7 @@ export const ObserverComponentVisibility = ({
           wasVisible = false
         }
       },
-      { threshold: 0.5 } // Adjust the threshold as needed
+      { threshold: 0.15 } // Adjust the threshold as needed
     )
 
     // Connect the observer to the target element
