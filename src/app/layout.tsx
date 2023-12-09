@@ -1,5 +1,7 @@
 import type { Metadata, Viewport } from 'next'
 import { Poppins, Outfit } from 'next/font/google'
+import { SpeedInsights } from '@vercel/speed-insights/next'
+import { Analytics } from '@vercel/analytics/react'
 
 import StyledComponentsRegistry from './lib/registry'
 import { Wrapper } from './components/wrapper'
@@ -49,6 +51,8 @@ export default function RootLayout({
             </Wrapper>
           </ThemeProvider>
         </StyledComponentsRegistry>
+        <SpeedInsights />
+        <Analytics />
       </body>
     </html>
   )
