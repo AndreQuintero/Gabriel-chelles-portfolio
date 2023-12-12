@@ -10,7 +10,6 @@ export const Wrapper = styled.section`
       ${theme.theme === Theme.LIGHT ? '#E0E0E0' : '#202020'};
     display: grid;
     grid-template-columns: 1fr;
-    grid-column-gap: 2.4rem;
     gap: 2.4rem;
     ${media.greaterThan('medium')`
         padding-top: 10.4rem;
@@ -47,7 +46,8 @@ export const DetailsWrapper = styled.div`
 export const Details = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 0.8rem ${media.greaterThan('medium')`
+  gap: 0.8rem;
+  ${media.greaterThan('medium')`
     gap: 1.6rem;
   `};
 `
