@@ -6,12 +6,13 @@ export const Banner = styled.section<{ $url: string }>`
     width: 100%;
     height: 33.5rem;
     background-image: url(${$url});
-    background-attachment: fixed;
+    background-attachment: scroll;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     ${media.greaterThan('medium')`
         height: 72rem;
+        background-attachment: fixed;
     `}
   `}
 `
