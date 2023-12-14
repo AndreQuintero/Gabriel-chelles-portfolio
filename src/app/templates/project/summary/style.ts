@@ -8,14 +8,9 @@ export const Wrapper = styled.section`
     padding-bottom: 2.4rem;
     border-bottom: 1px solid
       ${theme.theme === Theme.LIGHT ? '#E0E0E0' : '#202020'};
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 2.4rem;
     ${media.greaterThan('medium')`
         padding-top: 10.4rem;
         padding-bottom: 4.8rem;
-        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-        gap: 3rem;
     `}
   `}
 `
