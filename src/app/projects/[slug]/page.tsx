@@ -1,4 +1,5 @@
 import { About } from '@/app/templates/project/about'
+import { Articles } from '@/app/templates/project/articles'
 import { Banner } from '@/app/templates/project/banner'
 import { Goals } from '@/app/templates/project/goals'
 import { Hero } from '@/app/templates/project/hero'
@@ -11,6 +12,7 @@ export default function Projects() {
       <Banner />
       <Summary />
       <Goals />
+      <Articles />
       <About />
     </main>
   )
