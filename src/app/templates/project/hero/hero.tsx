@@ -28,7 +28,9 @@ export const Hero = () => {
           whileInView="show"
           viewport={{ once: true }}>
           <S.Text>Acesse o site</S.Text>
-          <S.Link>https://www.iguatemifortaleza.com.br/</S.Link>
+          <S.Link href="https://www.iguatemifortaleza.com.br/" target="_blank">
+            https://www.iguatemifortaleza.com.br/
+          </S.Link>
         </S.VisitWrapper>
       </Container>
     </S.Wrapper>
