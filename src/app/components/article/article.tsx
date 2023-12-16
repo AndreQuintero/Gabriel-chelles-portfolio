@@ -28,7 +28,7 @@ export const Article = ({
   gridType = 'single'
 }: ArticleProps) => {
   return (
-    <S.Wrapper>
+    <S.Wrapper $gridtype={gridType}>
       <Container>
         <TextGrid>
           {!!title && <S.Title $gridtype={gridType}>{title}</S.Title>}

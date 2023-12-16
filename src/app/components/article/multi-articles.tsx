@@ -9,7 +9,7 @@ type MultiArticlesProps = {
 
 export const MultiArticles = ({ articles }: MultiArticlesProps) => {
   return (
-    <S.Wrapper>
+    <S.Wrapper $gridtype="multi">
       {articles.map((article, index) => {
         const shouldRenderArticleGrid = index % 2 === 0
         const even = index + 1
