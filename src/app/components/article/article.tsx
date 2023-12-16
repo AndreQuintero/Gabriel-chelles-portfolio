@@ -2,13 +2,15 @@ import { List } from '../list'
 import * as S from './style'
 import { Container } from '../container'
 import { TextGrid } from '../text-grid'
+import { ArticleGridType } from '@/app/templates/project/articles'
 
-type ArticleProps = {
+export type ArticleProps = {
   title?: string
   introduction?: Array<string>
   items?: Array<string>
   conclusion?: Array<string>
   images?: Array<ImageArticleProps>
+  gridType?: ArticleGridType
 }
 
 type ImageArticleProps = {
@@ -22,27 +24,28 @@ export const Article = ({
   introduction = [],
   items = [],
   conclusion = [],
-  images = []
+  images = [],
+  gridType = 'single'
 }: ArticleProps) => {
   return (
     <S.Wrapper>
       <Container>
         <TextGrid>
-          {!!title && <S.Title>{title}</S.Title>}
+          {!!title && <S.Title $gridtype={gridType}>{title}</S.Title>}
           {introduction.length > 0 && (
-            <S.TextWrapper>
+            <S.TextWrapper $gridtype={gridType}>
               {introduction?.map((intro, index) => (
                 <S.Text key={`${intro}-${index}`}>{intro}</S.Text>
               ))}
             </S.TextWrapper>
           )}
           {items.length > 0 && (
-            <S.ListWrapper>
+            <S.ListWrapper $gridtype={gridType}>
               <List items={items} />{' '}
             </S.ListWrapper>
           )}
           {conclusion.length > 0 && (
-            <S.TextWrapper>
+            <S.TextWrapper $gridtype={gridType}>
               {conclusion.map((text, index) => (
                 <S.Text key={`${text}-${index}`}>{text}</S.Text>
               ))}
@@ -57,6 +60,7 @@ export const Article = ({
             {images.map((image) => (
               <S.ImageWrapper key={image.url}>
                 <S.Image
+                  $gridtype={gridType}
                   $fullWidth={image.fullWidth}
                   src={image.url}
                   alt={image.description}
