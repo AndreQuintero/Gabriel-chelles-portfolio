@@ -1,3 +1,6 @@
-import { Article } from './article'
+import { Article, ArticleProps } from './article'
+import { MultiArticles } from './multi-articles'
 
-export { Article }
+export { Article, MultiArticles }
+
+export type { ArticleProps }
