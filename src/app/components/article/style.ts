@@ -14,11 +14,13 @@ type Grid = {
   $gridtype: ArticleGridType
 }
 
-export const Wrapper = styled.article`
-  padding-bottom: 2.4rem;
-  ${media.greaterThan('medium')`
-        padding-bottom: 8.8rem;
+export const Wrapper = styled.article<Grid>`
+  ${({ $gridtype }) => css`
+    padding-bottom: 2.4rem;
+    ${media.greaterThan('medium')`
+        ${$gridtype === 'single' && 'padding-bottom: 8.8rem;'};
     `}
+  `}
 `
 
 export const Title = styled.h3<Grid>`
