@@ -163,6 +163,91 @@ const articles: ArticlesProps = {
           ]
         }
       ]
+    },
+    {
+      sectionType: 'single',
+      articles: [
+        {
+          title: 'Levantando novas ideias e gerando um backlog',
+          introduction: [
+            'Costumamos fazer um workshop de geração de ideias e priorização com todos os stakeholders, com isso, ajudando-os a ter novas ideias para o futuro, todos ficarem na mesma página, e aumentar a colaboração entre o time.'
+          ]
+        }
+      ]
+    },
+    {
+      sectionType: 'multi',
+      articles: [
+        {
+          images: [
+            {
+              url: 'https://s3-alpha-sig.figma.com/img/3a7f/9f02/3111a49d3896b865c98466573ca0ea89?Expires=1703462400&Signature=cdbbVXPQdaiWCkOm0S8wRVEjiJQK2z0myUzbQrvTDAAQjnkBhvlitLELpfoQtc9hbzVfCi-oLOvSjy1eTKbhaTsmJn5qz4N5ZReEd6VP4G96OEXkJkKHMb~JTmh8cxqv7GxWZs7xlYjojrGQUWa9APmcEzxB5UDHkhF8mQVJ6-ameDjZuDC8tkmLSwNKUqJC4j-S4hqldrB2UKoIv8fYvS~-Xgkr6F-FXiioi5eMN8b2GciC-mFBIoo2JXLRhvAGi1gQJKv08-5NoQCojkIa3JylMpH3KfYCTVsLa~qM1tSKXjft~BQIb9FcH~zwN~Q7f8TTMbdxsOXAamQfJ4O~aw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4',
+              description: 'project image 1'
+            }
+          ]
+        },
+        {
+          images: [
+            {
+              url: 'https://s3-alpha-sig.figma.com/img/89a1/da6d/fa804e143bdc5ded7f79f1470394575c?Expires=1703462400&Signature=GoA89axlwyMnn9qWIQJE-zy~UQDYtJVQgLVdAYsuVzcaCGu-ffbJ7YOcqZoVfbfX4DWetgYbm-vGNtazFA-tMHgJF4vxKGPhOklJCZLSlxTsEpGyk2R9EEPjrEMaNwYTerxTeeJ60MGXZ5PKcUZqHRMztS30Nj8tcS0c8MItmqsQpCNPq~a55eUIrh5itCJPDseRyuxG6cDCrXPlXox4HLjXYBmb1v~MjhpXy0uzkAYY~8XPlYP81JeFD4YEuGCmJ-jo0Dn1rPsWUZtP4b5SVOdCXarFp3cqJfKrEoDNg-ASW71Tw2f7F4avTRRbomaK6M654VGZoTN9A-hAR1k6CA__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4',
+              description: 'project image 2'
+            }
+          ]
+        }
+      ]
+    },
+    {
+      sectionType: 'single',
+      articles: [
+        {
+          title: 'Construindo, Validando e Melhorando',
+          introduction: [
+            'Na última etapa do projeto, prototipamos todas as telas do site, suas variações e componentes em wireframes, e após a validação do cliente e refino de UI, conduzimos testes de usabilidade e funcionalidade com clientes do shopping.'
+          ],
+          images: [
+            {
+              url: 'https://s3-alpha-sig.figma.com/img/3a7f/9f02/3111a49d3896b865c98466573ca0ea89?Expires=1703462400&Signature=cdbbVXPQdaiWCkOm0S8wRVEjiJQK2z0myUzbQrvTDAAQjnkBhvlitLELpfoQtc9hbzVfCi-oLOvSjy1eTKbhaTsmJn5qz4N5ZReEd6VP4G96OEXkJkKHMb~JTmh8cxqv7GxWZs7xlYjojrGQUWa9APmcEzxB5UDHkhF8mQVJ6-ameDjZuDC8tkmLSwNKUqJC4j-S4hqldrB2UKoIv8fYvS~-Xgkr6F-FXiioi5eMN8b2GciC-mFBIoo2JXLRhvAGi1gQJKv08-5NoQCojkIa3JylMpH3KfYCTVsLa~qM1tSKXjft~BQIb9FcH~zwN~Q7f8TTMbdxsOXAamQfJ4O~aw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4',
+              description: 'dasdsad',
+              fullWidth: true
+            },
+            {
+              url: 'https://s3-alpha-sig.figma.com/img/edd0/e1f9/284018f12a9d6cd7300727c1f8cad75f?Expires=1703462400&Signature=q5EatPAG5iPcHhEWokIwuXx0~CmUQYx2Sfudm79tooBjOSyN2jje9RK8hwfSu8nICF6IjWxXFRBw0ycK-GBbT1ZK5z6YJdbbT4Or36NUOg1E3HZgGvbBjmN37deucZ9fke5xaoCtXAVwrghf02Oa7pht0BWmS9bX5jteKMHeoR1sVeQI3AYvXf9ai30nnxIKqxO~qvpBqEbQwmllmFbAipgcqxl5w6bVsqfQLkgDWfKXeJd-YbHElw9d43y4HGZc432G~FFMSWD7NoqYYH1wPcQgZToDk7J0nF4GrxpbViHBxjMiNDqfNaN-z8Nwr5FdqPVtoiWtzi8DmVzJXDWnYA__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4',
+              description: 'chelles',
+              fullWidth: true
+            },
+            {
+              url: 'https://s3-alpha-sig.figma.com/img/a227/829c/b27fc5fa88ad3f50ae701890fbef9208?Expires=1703462400&Signature=mEjaI3F497ekeLvLiPO-HS0mYpQUMbxHEP93U43AEdoEj3SO8C3B3-gv1tLpt4EXIXVdasc5FKUWZstIb0CsHTJ~mWCqqdbf2rTmCTuvZHbnROYjNLwRhKgK9464RgtZ777RutdpWR6QWcXFcQfBx8MwWQdB-bRpcBgre-gaajuGpUeN1~1DT7RUmcEdVSUeM-7ubsomAxhg7oUEYZhGHDHn~ws5upgjYavRhrxPVk6rp107TpV6O3MXKW-kr226BUvg6aozEPLipiEvKk-6MzSc4HIWFcJQWXF0YrOipbpzR3Uu~QfynRVnrAcB-vCGzbsAtQrTfzNbgc-E7wMESA__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4',
+              description: 'graphic',
+              fullWidth: true
+            }
+          ]
+        },
+        {
+          introduction: [
+            'Com esse novo projeto, o Iguatemi agora conseguirá entregar uma experiência de compras online fora da curva, apresentando para o mercado o conceito de "fígital", onde os lojistas conseguem ter mais uma frente para expor seus produtos e gerar receita, em quanto os clientes da região são apresentados a uma nova forma de ir ao shopping, tanto digitalmente quanto fisicamente.',
+            'Pioneirismo é uma característica dessa marca, que continua inovando o mercado na região entregando um novo ecossistema tecnológico que acompanha as tendências do resto do mundo.'
+          ]
+        }
+      ]
+    },
+    {
+      sectionType: 'single',
+      articles: [
+        {
+          images: [
+            {
+              url: 'https://s3-alpha-sig.figma.com/img/7ee9/9d46/82973f0964a5869b4a66d7a7f7e27dfd?Expires=1703462400&Signature=ISeujuu5vjXqL4UMkJLz8V42fpzr4PecirHOXvhj0ow8vG9hP6XNxrqUnm27F2mYFJI18Ywb0Bo-U7jaGH96QoBBXTEyAH9KaxM7P1g4cv-lUrJmB5~Y1fPLzxuhFsxAv1UZqx~TCqyIERPJWB3u73U9RkqKrZkeJ3XKUHVorGmcObpH7jYuGCLV8sL711yYZjIkEzAO1pAl-ydseRpEdtLTPPDHu6vRQvoxHW9bLEzfMRz6xBZR5gtf4z1UcO97ocwiwPSNe9naeOPDUrjL266LZ5QM1vAqyEtSP8A843Pk14y5tDSEPyhhsURxgcT6MJjf0T8GJnW8mSIc2U8MGA__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4',
+              description: 'case 1',
+              fullWidth: true
+            },
+            {
+              url: 'https://s3-alpha-sig.figma.com/img/f2de/d99c/89fdfd04d6fbbf0937148f43063df4b1?Expires=1703462400&Signature=nciq-~gozigHjj3nZFkUWGGCClK6McnmlT49uMscGlJSRmB0xIfYwN1zXDIf0T4jFLP2v881MScG5hDe6cPhYuRJaJKsukSUbT~11OMfWDjykLIvYslJINJxMMj5DmHm4JZsdA23EH3IbZhOL-1Dg5cm7E0xkcAQdA2V7lhyPhTvcfsN88ta5gJLFtoov8cfUqW~UCf0SV8eACvdAl6qevMbU-gv0EWZW1i~o~Z~~3qPCsiddtCgfBuvg5OBzDYyaknGhtof6lrlQ-iDZB7txHGDuvnZLJ~BpU7IsGo-DrU5fNU~UdCXRqNVmin7Lw3Mw9erukAnS1cZQGrS-uYGPg__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4',
+              description: 'case 2',
+              fullWidth: true
+            }
+          ]
+        }
+      ]
     }
   ]
 }
