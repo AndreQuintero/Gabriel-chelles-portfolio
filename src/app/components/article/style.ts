@@ -1,5 +1,18 @@
+import { ArticleGridType } from '@/app/templates/project/articles'
 import styled, { css } from 'styled-components'
 import media from 'styled-media-query'
+
+const variants = {
+  single: () => css`
+    grid-column-start: 1;
+    grid-column-end: 7;
+  `,
+  multi: () => css``
+}
+
+type Grid = {
+  $gridtype: ArticleGridType
+}
 
 export const Wrapper = styled.article`
   padding-bottom: 2.4rem;
@@ -8,8 +21,8 @@ export const Wrapper = styled.article`
     `}
 `
 
-export const Title = styled.h3`
-  ${({ theme }) => css`
+export const Title = styled.h3<Grid>`
+  ${({ theme, $gridtype }) => css`
     font-family: ${theme.fonts.style.primary};
     font-size: 1.6rem;
     font-weight: 400;
@@ -17,16 +30,16 @@ export const Title = styled.h3`
     ${media.greaterThan('medium')`
         font-size: 2.4rem;
         margin-bottom: 1.6rem;
-        grid-column-start: 1;
-        grid-column-end: 7;
+       ${variants[$gridtype]};
     `}
   `}
 `
 
-export const TextWrapper = styled.div`
-  ${media.greaterThan('medium')`
-    grid-column-start: 1;
-    grid-column-end: 7;
+export const TextWrapper = styled.div<Grid>`
+  ${({ $gridtype }) => css`
+    ${media.greaterThan('medium')`
+      ${variants[$gridtype]};
+    `}
   `}
 `
 
@@ -44,13 +57,14 @@ export const Text = styled.p`
   `}
 `
 
-export const ListWrapper = styled.div`
-  margin-bottom: 0.8rem;
-  ${media.greaterThan('medium')`
-        margin-bottom: 1.6rem;
-        grid-column-start: 1;
-        grid-column-end: 7;
+export const ListWrapper = styled.div<Grid>`
+  ${({ $gridtype }) => css`
+    margin-bottom: 0.8rem;
+    ${media.greaterThan('medium')`
+          margin-bottom: 1.6rem;
+          ${variants[$gridtype]};
     `}
+  `}
 `
 
 export const ImagesWrapper = styled.div`
@@ -69,13 +83,29 @@ export const ImageWrapper = styled.div`
   position: relative;
 `
 
-export const Image = styled.img<{ $fullWidth?: boolean }>`
-  ${({ $fullWidth }) => css`
+export const Image = styled.img<{
+  $fullWidth?: boolean
+  $gridtype: ArticleGridType
+}>`
+  ${({ $fullWidth, $gridtype }) => css`
     ${$fullWidth && 'width: 100%;'}
     max-width: 131.4rem;
     object-fit: cover;
+    ${$gridtype === 'multi' && 'width: 100%;'}
     ${media.lessThan('medium')`
       width: 100%;
     `}
+  `}
+`
+export const WrapperMultiArticles = styled.div`
+  padding-bottom: 8.8rem;
+`
+
+export const GridMultiArticles = styled.div`
+  display: grid;
+  grid-template-columns: 1fr;
+  ${media.greaterThan('medium')`
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 3rem;
   `}
 `
