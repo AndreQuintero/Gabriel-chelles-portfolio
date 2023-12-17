@@ -16,6 +16,7 @@ export const Video = () => {
           height="315"
           src="https://www.youtube.com/embed/voTI0qi5dLU?si=M96Fv0HsjBk-66yQ&autoplay=1&mute=1"
           title="YouTube video player"
+          loading="lazy"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; mute"
           allowFullScreen></iframe>
       </S.Wrapper>

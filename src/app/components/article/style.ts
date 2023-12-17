@@ -90,10 +90,11 @@ export const Image = styled.img<{
   $fullWidth?: boolean
   $gridtype: ArticleGridType
 }>`
-  ${({ $fullWidth, $gridtype }) => css`
+  ${({ theme, $fullWidth, $gridtype }) => css`
     ${$fullWidth && 'width: 100%;'}
     max-width: 131.4rem;
     object-fit: cover;
+    background-color: ${theme.colors.tertiary};
     ${$gridtype === 'multi' && 'width: 100%;'}
     ${media.lessThan('medium')`
       width: 100%;

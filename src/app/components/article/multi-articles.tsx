@@ -79,6 +79,7 @@ export const MultiArticles = ({ articles }: MultiArticlesProps) => {
                         <S.Image
                           $gridtype="multi"
                           src={image.url}
+                          loading="lazy"
                           alt={image.description}
                         />
                       </S.ImageWrapper>
@@ -95,6 +96,7 @@ export const MultiArticles = ({ articles }: MultiArticlesProps) => {
                           <S.Image
                             $gridtype="multi"
                             src={image.url}
+                            loading="lazy"
                             alt={image.description}
                           />
                         </S.ImageWrapper>

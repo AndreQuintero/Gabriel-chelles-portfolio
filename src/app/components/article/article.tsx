@@ -90,6 +90,7 @@ export const Article = ({
                   $gridtype={gridType}
                   $fullWidth={image.fullWidth}
                   src={image.url}
+                  loading="lazy"
                   alt={image.description}
                 />
               </S.ImageWrapper>
@@ -111,6 +112,7 @@ export const Article = ({
                   $gridtype={gridType}
                   $fullWidth={true}
                   src={showcase.url}
+                  loading="lazy"
                   alt={showcase.description}
                 />
               </S.ImageWrapper>
