@@ -1,3 +1,4 @@
+import { fadeIn } from '@/app/motion'
 import * as S from './style'
 
 type ListProps = {
@@ -7,7 +8,11 @@ type ListProps = {
 
 export const List = ({ items, space = 'large' }: ListProps) => {
   return (
-    <S.List>
+    <S.List
+      variants={fadeIn(0.2)}
+      initial="hidden"
+      whileInView="show"
+      viewport={{ once: true }}>
       {items.map((item, index) => (
         <S.Item $space={space} key={`${item}-${index}`}>
           {item}

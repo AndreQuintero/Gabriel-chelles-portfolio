@@ -1,4 +1,5 @@
 import { Theme } from '@/app/style/theme'
+import { motion } from 'framer-motion'
 import styled, { css } from 'styled-components'
 import media from 'styled-media-query'
 
@@ -14,7 +15,7 @@ export const Wrapper = styled.section`
     `}
   `}
 `
-export const Description = styled.p`
+export const Description = styled(motion.p)`
   ${({ theme }) => css`
     font-family: ${theme.fonts.style.secondary};
     font-size: 1.4rem;
@@ -31,8 +32,10 @@ export const DetailsWrapper = styled.div`
   display: flex;
   flex-direction: column;
   gap: 2.4rem;
+  margin-top: 2.4rem;
   ${media.greaterThan('medium')`
         gap: 3.2rem;
+        margin-top: 0;
         grid-column-start: 8;
         grid-column-end: 12;
     `}
@@ -47,7 +50,7 @@ export const Details = styled.div`
   `};
 `
 
-export const Title = styled.h4`
+export const Title = styled(motion.h4)`
   ${({ theme }) => css`
     font-family: ${theme.fonts.style.primary};
     font-size: 1.6rem;
@@ -58,7 +61,7 @@ export const Title = styled.h4`
   `}
 `
 
-export const Information = styled.p`
+export const Information = styled(motion.p)`
   ${({ theme }) => css`
     font-family: ${theme.fonts.style.secondary};
     font-size: 1.4rem;

@@ -3,6 +3,7 @@ import * as S from './style'
 import { Container } from '../container'
 import { TextGrid } from '../text-grid'
 import { ArticleGridType } from '@/app/templates/project/articles'
+import { fadeIn } from '@/app/motion'
 
 export type ArticleProps = {
   title?: string
@@ -33,9 +34,23 @@ export const Article = ({
     <S.Wrapper $gridtype={gridType}>
       <Container>
         <TextGrid>
-          {!!title && <S.Title $gridtype={gridType}>{title}</S.Title>}
+          {!!title && (
+            <S.Title
+              variants={fadeIn(0.2)}
+              initial="hidden"
+              whileInView="show"
+              viewport={{ once: true }}
+              $gridtype={gridType}>
+              {title}
+            </S.Title>
+          )}
           {introduction.length > 0 && (
-            <S.TextWrapper $gridtype={gridType}>
+            <S.TextWrapper
+              variants={fadeIn(0.2)}
+              initial="hidden"
+              whileInView="show"
+              viewport={{ once: true }}
+              $gridtype={gridType}>
               {introduction?.map((intro, index) => (
                 <S.Text key={`${intro}-${index}`}>{intro}</S.Text>
               ))}
@@ -43,11 +58,16 @@ export const Article = ({
           )}
           {items.length > 0 && (
             <S.ListWrapper $gridtype={gridType}>
-              <List items={items} />{' '}
+              <List items={items} />
             </S.ListWrapper>
           )}
           {conclusion.length > 0 && (
-            <S.TextWrapper $gridtype={gridType}>
+            <S.TextWrapper
+              variants={fadeIn(0.2)}
+              initial="hidden"
+              whileInView="show"
+              viewport={{ once: true }}
+              $gridtype={gridType}>
               {conclusion.map((text, index) => (
                 <S.Text key={`${text}-${index}`}>{text}</S.Text>
               ))}
@@ -59,8 +79,13 @@ export const Article = ({
       {images.length > 0 && (
         <Container ignorePaddingOnMobile>
           <S.ImagesWrapper>
-            {images.map((image) => (
-              <S.ImageWrapper key={image.url}>
+            {images.map((image, index) => (
+              <S.ImageWrapper
+                variants={fadeIn(0.2 * index + 1)}
+                initial="hidden"
+                whileInView="show"
+                viewport={{ once: true }}
+                key={image.url}>
                 <S.Image
                   $gridtype={gridType}
                   $fullWidth={image.fullWidth}
@@ -75,8 +100,13 @@ export const Article = ({
       {showcases.length > 0 && (
         <Container ignorePaddingOnMobile>
           <S.ShowCaseWrapper>
-            {showcases.map((showcase) => (
-              <S.ImageWrapper key={`showcase-${showcase.url}`}>
+            {showcases.map((showcase, index) => (
+              <S.ImageWrapper
+                variants={fadeIn(0.2 * index + 1)}
+                initial="hidden"
+                whileInView="show"
+                viewport={{ once: true }}
+                key={`showcase-${showcase.url}`}>
                 <S.Image
                   $gridtype={gridType}
                   $fullWidth={true}

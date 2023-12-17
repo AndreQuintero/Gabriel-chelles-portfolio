@@ -1,4 +1,5 @@
 import { ArticleGridType } from '@/app/templates/project/articles'
+import { motion } from 'framer-motion'
 import styled, { css } from 'styled-components'
 import media from 'styled-media-query'
 
@@ -23,7 +24,7 @@ export const Wrapper = styled.article<Grid>`
   `}
 `
 
-export const Title = styled.h3<Grid>`
+export const Title = styled(motion.h3)<Grid>`
   ${({ theme, $gridtype }) => css`
     font-family: ${theme.fonts.style.primary};
     font-size: 1.6rem;
@@ -37,7 +38,7 @@ export const Title = styled.h3<Grid>`
   `}
 `
 
-export const TextWrapper = styled.div<Grid>`
+export const TextWrapper = styled(motion.div)<Grid>`
   ${({ $gridtype }) => css`
     ${media.greaterThan('medium')`
       ${variants[$gridtype]};
@@ -69,7 +70,7 @@ export const ListWrapper = styled.div<Grid>`
   `}
 `
 
-export const ImagesWrapper = styled.div`
+export const ImagesWrapper = styled(motion.div)`
   margin-top: 2.4rem;
   display: flex;
   flex-direction: column;
@@ -80,7 +81,7 @@ export const ImagesWrapper = styled.div`
   `}
 `
 
-export const ImageWrapper = styled.div`
+export const ImageWrapper = styled(motion.div)`
   width: 100%;
   position: relative;
 `

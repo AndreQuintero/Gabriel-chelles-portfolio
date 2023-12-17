@@ -1,7 +1,8 @@
+import { motion } from 'framer-motion'
 import styled, { css } from 'styled-components'
 import media from 'styled-media-query'
 
-export const List = styled.ul`
+export const List = styled(motion.ul)`
   padding-left: 2.2rem;
 `
 

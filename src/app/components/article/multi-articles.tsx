@@ -1,4 +1,5 @@
 'use client'
+import { fadeIn } from '@/app/motion'
 import { ArticleProps } from '.'
 import { Container } from '../container'
 import * as S from './style'
@@ -20,19 +21,43 @@ export const MultiArticles = ({ articles }: MultiArticlesProps) => {
               key={`multi-article${article.title}-${index}`}>
               <Container>
                 <S.GridMultiArticles>
-                  <S.Title $gridtype="multi">{article.title}</S.Title>
+                  <S.Title
+                    variants={fadeIn(0.2)}
+                    initial="hidden"
+                    whileInView="show"
+                    viewport={{ once: true }}
+                    $gridtype="multi">
+                    {article.title}
+                  </S.Title>
                   {articleEven && (
-                    <S.Title $gridtype="multi">{articleEven.title}</S.Title>
+                    <S.Title
+                      variants={fadeIn(0.4)}
+                      initial="hidden"
+                      whileInView="show"
+                      viewport={{ once: true }}
+                      $gridtype="multi">
+                      {articleEven.title}
+                    </S.Title>
                   )}
                 </S.GridMultiArticles>
                 <S.GridMultiArticles>
-                  <S.TextWrapper $gridtype="multi">
+                  <S.TextWrapper
+                    variants={fadeIn(0.2)}
+                    initial="hidden"
+                    whileInView="show"
+                    viewport={{ once: true }}
+                    $gridtype="multi">
                     {article.introduction?.map((text, index) => (
                       <S.Text key={`${text}-${index}A`}>{text}</S.Text>
                     ))}
                   </S.TextWrapper>
                   {articleEven && (
-                    <S.TextWrapper $gridtype="multi">
+                    <S.TextWrapper
+                      variants={fadeIn(0.4)}
+                      initial="hidden"
+                      whileInView="show"
+                      viewport={{ once: true }}
+                      $gridtype="multi">
                       {articleEven.introduction?.map((text, index) => (
                         <S.Text key={`${text}-${index + 1}B`}>{text}</S.Text>
                       ))}
@@ -44,7 +69,11 @@ export const MultiArticles = ({ articles }: MultiArticlesProps) => {
                 key={`${article.title}-${index}B`}
                 ignorePaddingOnMobile>
                 <S.GridMultiArticles>
-                  <S.ImagesWrapper>
+                  <S.ImagesWrapper
+                    variants={fadeIn(0.2)}
+                    initial="hidden"
+                    whileInView="show"
+                    viewport={{ once: true }}>
                     {article.images?.map((image, index) => (
                       <S.ImageWrapper key={`${image.url}-${index}A`}>
                         <S.Image
@@ -55,7 +84,11 @@ export const MultiArticles = ({ articles }: MultiArticlesProps) => {
                       </S.ImageWrapper>
                     ))}
                   </S.ImagesWrapper>
-                  <S.ImagesWrapper>
+                  <S.ImagesWrapper
+                    variants={fadeIn(0.4)}
+                    initial="hidden"
+                    whileInView="show"
+                    viewport={{ once: true }}>
                     {articleEven &&
                       articleEven.images?.map((image, index) => (
                         <S.ImageWrapper key={`${image.url}-${index + 1}B`}>

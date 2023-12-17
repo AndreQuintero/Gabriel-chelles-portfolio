@@ -3,6 +3,7 @@ import { Container } from '@/app/components/container'
 import * as S from './style'
 import { List } from '@/app/components/list'
 import { TextGrid } from '@/app/components/text-grid'
+import { fadeIn } from '@/app/motion'
 
 export const Goals = () => {
   return (
@@ -10,7 +11,13 @@ export const Goals = () => {
       <S.Wraper>
         <TextGrid>
           <S.Details $position="left">
-            <S.Title>Objetivos</S.Title>
+            <S.Title
+              variants={fadeIn(0.2)}
+              initial="hidden"
+              whileInView="show"
+              viewport={{ once: true }}>
+              Objetivos
+            </S.Title>
             <List
               space="small"
               items={[
@@ -22,7 +29,13 @@ export const Goals = () => {
             />
           </S.Details>
           <S.Details $position="right">
-            <S.Title>Resultados</S.Title>
+            <S.Title
+              variants={fadeIn(0.2)}
+              initial="hidden"
+              whileInView="show"
+              viewport={{ once: true }}>
+              Resultados
+            </S.Title>
             <List
               space="small"
               items={[
