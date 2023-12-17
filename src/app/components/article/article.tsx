@@ -79,9 +79,9 @@ export const Article = ({
       {images.length > 0 && (
         <Container ignorePaddingOnMobile>
           <S.ImagesWrapper>
-            {images.map((image, index) => (
+            {images.map((image) => (
               <S.ImageWrapper
-                variants={fadeIn(0.2 * index + 1)}
+                variants={fadeIn(0.2)}
                 initial="hidden"
                 whileInView="show"
                 viewport={{ once: true }}
@@ -102,7 +102,7 @@ export const Article = ({
           <S.ShowCaseWrapper>
             {showcases.map((showcase, index) => (
               <S.ImageWrapper
-                variants={fadeIn(0.2 * index + 1)}
+                variants={fadeIn(0.2 * index)}
                 initial="hidden"
                 whileInView="show"
                 viewport={{ once: true }}
