@@ -27,7 +27,7 @@ export const Title = styled.h1`
   `}
 `
 
-export const Showcase = styled.h4`
+export const Showcase = styled.h5`
   ${({ theme }) => css`
     margin-top: 6.4rem;
     font-family: ${theme.fonts.style.secondary};
