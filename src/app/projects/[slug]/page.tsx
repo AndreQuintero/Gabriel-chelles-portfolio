@@ -245,6 +245,24 @@ const articles: ArticlesProps = {
               description: 'case 2',
               fullWidth: true
             }
+          ],
+          showcases: [
+            {
+              url: 'https://s3-alpha-sig.figma.com/img/8354/198a/4b90b297bfcf64c90312c8566f01fc21?Expires=1703462400&Signature=Pft4UlluwxKv-NENtDYQRkHyq-f4pWXcHPOon715VXsCRcAlYC0UsASR3Zb4pYXqH318p5li4eQDnElgMznLWJ7lWNM0wlbVT8Wf0FhYkwUfSELBTBwkhzm-ykIT5Oo83l3JJMnGvTdg~xKhK7n3-PVRo2VroxGFWzKpFwwN~Y6WxYq-~M9GturIoyUH0sHyM1FM-RntDTWw-8nuLlguMTVjTtTFw8SMn2IXE2ZsFCuuE1MPVfUzYfFODvPlOoFbGY7F86uW3~xLy3NDKnsSYG58pz6bVQPQCund1glNkAR293uxtR2xm03cRyC6RpRFeE3B35M4yI3NluzQaFEJjA__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4',
+              description: 'show case 1'
+            },
+            {
+              url: 'https://s3-alpha-sig.figma.com/img/af19/170d/ae54a6f47fb46f2944ccf1c58c0eb9ad?Expires=1703462400&Signature=BohX9DlKI8gYEL~3p9h00Z9lqzS9fTg1RYtLfScMszeZmoakrdpXwSfQeC14omYF7KvIh60IDc4i6mlThnElTkew-GOzJepzIqteULz2s~6D-TIsRkH5LXN9MBLTJGnxa-WvbZ8uDn5gbBjM4cRPuCBuItzL7mWTeINKHRC2Lk8rG0RVwOFG1VUR~lgfPU1lp0E7XFTmwod5r4Vka21uHH7MSBxazFRJnaqNxCFfsVNvmbai6wkWsfVDO-LLJbXxPNdZcVu~cSRo69FpUDevgiKwZOsyVUT0zyH4EPgLte~uV~L9hCb4izygyGhoSZAJQl~HcwQ4no5LA3-SjZ3RlA__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4',
+              description: 'show case 2'
+            },
+            {
+              url: 'https://s3-alpha-sig.figma.com/img/f17f/b8b1/ba100a28fff43f7e940556640bc32d17?Expires=1703462400&Signature=VuuQCKU5qTa4zA6u7NzRtgtRTto~u1q-FVE6IpdvtwqwDHXS6EX2PASB9vyMgR3GfTN~r63eIc4EXIKCO9sHZyWDdR4G1962~7Qyr6eFxJxGPqKZQzp71sfscYt4stwUYyAOend8Gvz~GacEt-6CCsZ0spvbfYXLpB4h6jZp-~GoDaINEkv7noQN-SxORmVN4fZ8C-8Qwg7PNNM4~VfRMpAJsUGzinIJbBSrc8HL1TDF3AtU2KnflUiFxU6HxwCufqhk13LsXtNf19BAIuZm2YHkr5H6RyrSzDKkzXD9gQ2yzYabB4rWwhfOgNH~keqQUYOd~Wjaq95TiJznipP~1A__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4',
+              description: 'show case 3'
+            },
+            {
+              url: 'https://s3-alpha-sig.figma.com/img/70a1/d647/6c8f7b0494fe0932387aa50f26dd3a64?Expires=1703462400&Signature=l6VbFBO3LmB-6cmG0zIJCs0qn2Ep3G8yPzuovhzl3GPpupOpuiPrhtI-gC06N~JEgabiKC36aASo7ej6P2mrBOwESMXJ6eN13CSS2BiHP5HFwgFzcvtUrykXdu0re5kPlkqb5gmD3GB~tsdq7L-r7FnrwCGI9dKCFHffc0l9AXek7wKCAtLZ5B4uTjaoc31jpzjdkBUem4VYfs3fnL087KBJNH~lPjobFmqemk~hA0mPPZ1N4Paz8k28yTDOZo8pCUO1rFMpLY2SYVO~G2rLT6QqKP3fcBNKhUpc1w1hnuuZxohNhadTB875mJM1saqs7X8hh7sC1cApm3xodfgkOg__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4',
+              description: 'show case 4'
+            }
           ]
         }
       ]
