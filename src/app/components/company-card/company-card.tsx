@@ -8,7 +8,7 @@ export type CompanyCardProps = {
 export const CompanyCard = ({ url, companyName }: CompanyCardProps) => {
   return (
     <S.Wrapper>
-      <S.Image src={url} alt={companyName} />
+      <S.Image loading="lazy" src={url} alt={companyName} />
     </S.Wrapper>
   )
 }
