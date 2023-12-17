@@ -11,6 +11,7 @@ export type ArticleProps = {
   conclusion?: Array<string>
   images?: Array<ImageArticleProps>
   gridType?: ArticleGridType
+  showcases?: Array<ImageArticleProps>
 }
 
 type ImageArticleProps = {
@@ -25,7 +26,8 @@ export const Article = ({
   items = [],
   conclusion = [],
   images = [],
-  gridType = 'single'
+  gridType = 'single',
+  showcases = []
 }: ArticleProps) => {
   return (
     <S.Wrapper $gridtype={gridType}>
@@ -68,6 +70,22 @@ export const Article = ({
               </S.ImageWrapper>
             ))}
           </S.ImagesWrapper>
+        </Container>
+      )}
+      {showcases.length > 0 && (
+        <Container ignorePaddingOnMobile>
+          <S.ShowCaseWrapper>
+            {showcases.map((showcase) => (
+              <S.ImageWrapper key={`showcase-${showcase.url}`}>
+                <S.Image
+                  $gridtype={gridType}
+                  $fullWidth={true}
+                  src={showcase.url}
+                  alt={showcase.description}
+                />
+              </S.ImageWrapper>
+            ))}
+          </S.ShowCaseWrapper>
         </Container>
       )}
     </S.Wrapper>

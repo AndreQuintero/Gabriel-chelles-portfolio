@@ -111,3 +111,13 @@ export const GridMultiArticles = styled.div`
     grid-column-gap: 3rem;
   `}
 `
+export const ShowCaseWrapper = styled.div`
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-column-gap: 0.8rem;
+  margin-top: 2.5rem;
+  ${media.greaterThan('medium')`
+    grid-column-gap: 3rem;
+    margin-top: 3.2rem;
+  `}
+`
