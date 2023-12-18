@@ -1,3 +1,4 @@
+import { Routes } from '@/app/routes'
 import { ProjectImage } from '../project-image'
 import * as S from './style'
 
@@ -14,7 +15,7 @@ type ProjectCardProps = {
 
 export const ProjectCard = ({ title, slug, images }: ProjectCardProps) => {
   return (
-    <S.Wrapper href={`#${slug}`}>
+    <S.Wrapper href={`${Routes.PROJECTS}/${slug}`}>
       <ProjectImage images={images} />
       <S.Title>{title}</S.Title>
     </S.Wrapper>

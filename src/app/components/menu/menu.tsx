@@ -9,6 +9,8 @@ import * as S from './style'
 import { Navigation } from './navigation'
 import { MenuIconOpened, MenuItemClosed } from './menu-icon'
 import { Contact } from '../contact'
+import { Link } from '../link'
+import { Routes } from '@/app/routes'
 
 const Menu = () => {
   const { isMobile } = useViewDetect()
@@ -23,7 +25,9 @@ const Menu = () => {
   return (
     <>
       <S.Header>
-        <S.PortfolioName>Gabriel Chelles</S.PortfolioName>
+        <Link href={Routes.HOME}>
+          <S.PortfolioName>Gabriel Chelles</S.PortfolioName>
+        </Link>
         {!isMobile && isMobile !== undefined && (
           <Navigation isMobile={isMobile} />
         )}

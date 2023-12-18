@@ -1,3 +1,4 @@
+import { Routes } from '@/app/routes'
 import * as S from './style'
 
 type NavigationProps = {
@@ -10,7 +11,7 @@ export const Navigation = ({ isMobile }: NavigationProps) => {
       <S.LinksList>
         {isMobile && (
           <li>
-            <S.Link href="#">Home</S.Link>
+            <S.Link href={Routes.HOME}>Home</S.Link>
           </li>
         )}
         <li>

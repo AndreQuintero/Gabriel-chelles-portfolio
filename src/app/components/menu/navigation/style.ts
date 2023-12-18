@@ -1,3 +1,4 @@
+import { Link as LinkComponent } from '@/app/components/link'
 import styled, { css } from 'styled-components'
 import media from 'styled-media-query'
 
@@ -15,7 +16,7 @@ export const LinksList = styled.ul`
     height: 100%;
   `}
 `
-export const Link = styled.a`
+export const Link = styled(LinkComponent)`
   ${({ theme }) => css`
     font-family: ${theme.fonts.style.secondary};
     font-size: 2.8rem;

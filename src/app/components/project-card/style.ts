@@ -1,5 +1,6 @@
 import styled, { css } from 'styled-components'
 import media from 'styled-media-query'
+import { Link } from '../link'
 
 export const Title = styled.h4`
   ${({ theme }) => css`
@@ -17,7 +18,7 @@ export const Title = styled.h4`
   `}
 `
 
-export const Wrapper = styled.a`
+export const Wrapper = styled(Link)`
   display: block;
   width: 100%;
   text-decoration: none;

@@ -1,9 +1,11 @@
 import { NextPageProps } from '@/app/templates/project/next-page'
 import * as S from './style'
+import { Link } from '../link'
+import { Routes } from '@/app/routes'
 
 export const NextPage = ({ color, text }: NextPageProps) => {
   return (
-    <S.Link href={'/'}>
+    <Link href={`${Routes.PROJECTS}/iguatemi`}>
       <S.Wrapper $text={text!} $color={color}>
         <S.TextWrapper>
           <S.SubTitle>Próximo projeto</S.SubTitle>
@@ -17,6 +19,6 @@ export const NextPage = ({ color, text }: NextPageProps) => {
           />
         </S.ImageWrapper>
       </S.Wrapper>
-    </S.Link>
+    </Link>
   )
 }
