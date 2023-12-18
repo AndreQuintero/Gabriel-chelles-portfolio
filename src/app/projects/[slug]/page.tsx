@@ -1,8 +1,8 @@
-import { About } from '@/app/templates/project/about'
 import { Articles, ArticlesProps } from '@/app/templates/project/articles'
 import { Banner } from '@/app/templates/project/banner'
 import { Goals } from '@/app/templates/project/goals'
 import { Hero } from '@/app/templates/project/hero'
+import { NextPageSession as NextPage } from '@/app/templates/project/next-page'
 import { Summary } from '@/app/templates/project/summary'
 
 const articles: ArticlesProps = {
@@ -278,7 +278,7 @@ export default function Projects() {
       <Summary />
       <Goals />
       <Articles sectionArticles={articles.sectionArticles} />
-      <About />
+      <NextPage color="#FFC099" />
     </main>
   )
 }
