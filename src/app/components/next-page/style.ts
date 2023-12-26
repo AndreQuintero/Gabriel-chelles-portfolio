@@ -43,8 +43,10 @@ export const SubTitle = styled.h4`
     font-family: ${theme.fonts.style.secondary};
     font-size: 1.4rem;
     font-weight: 400;
+    text-align: center;
     ${media.greaterThan('medium')`
         font-size: 1.8rem;
+        text-align: left;
     `}
   `}
 `
