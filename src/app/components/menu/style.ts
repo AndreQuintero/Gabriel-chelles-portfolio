@@ -26,6 +26,7 @@ export const PortfolioName = styled.label`
     color: ${theme.colors.secondary};
     font-size: 2.4rem;
     font-weight: 400;
+    cursor: pointer;
   `}
 `
 
