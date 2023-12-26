@@ -21,7 +21,6 @@ export const Projects = ({ projects }: ProjectProps) => {
         <ProjectsList projects={projects} />
         <S.MoreProjects>
           <Button
-            as="a"
             colorScheme="secondary"
             onClick={() => router.push(Routes.PROJECTS)}>
             Ver todos os 12 projetos
