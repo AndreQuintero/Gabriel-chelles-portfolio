@@ -1,5 +1,5 @@
-import { ProjectCard, ImageProps } from './project-card'
+import { ProjectCard, ImageProps, ProjectCardProps } from './project-card'
 
 export { ProjectCard }
 
-export type { ImageProps }
+export type { ImageProps, ProjectCardProps }
