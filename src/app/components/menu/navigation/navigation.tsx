@@ -15,7 +15,7 @@ export const Navigation = ({ isMobile }: NavigationProps) => {
           </li>
         )}
         <li>
-          <S.Link href="#">Projetos</S.Link>
+          <S.Link href={Routes.PROJECTS}>Projetos</S.Link>
         </li>
         <li>
           <S.Link href="#">Sobre</S.Link>
