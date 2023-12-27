@@ -6,7 +6,6 @@ export const Wrapper = styled.div<{ $color: string; $text: 'light' | 'dark' }>`
   ${({ $color, $text }) => css`
     color: ${$text === 'dark' ? '#010001' : '#F8F8F8'};
     width: 100%;
-    height: 81.7rem;
     background-color: ${$color};
     padding: 6.4rem 1.6rem;
     display: flex;
@@ -18,6 +17,7 @@ export const Wrapper = styled.div<{ $color: string; $text: 'light' | 'dark' }>`
     transition: all 0.3s ease-in;
     ${media.greaterThan('medium')`
         flex-direction: row;
+        height: 81.7rem;
         gap: 11.6rem;
         height: 41.2rem;
         padding: 2.4rem;
