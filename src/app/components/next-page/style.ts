@@ -31,11 +31,13 @@ export const Wrapper = styled.div<{ $color: string; $text: 'light' | 'dark' }>`
   `}
 `
 export const TextWrapper = styled.div`
-  flex-grow: 1;
   display: flex;
   flex-direction: column;
   gap: 1.6rem;
   justify-content: center;
+  ${media.greaterThan('medium')`
+    flex-grow: 1;
+  `}
 `
 
 export const SubTitle = styled.h4`
