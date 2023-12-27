@@ -41,12 +41,18 @@ const Menu = () => {
           </div>
         )}
       </S.Header>
-      <AnimatePresence>{isMenuVisible && <MenuMobile />}</AnimatePresence>
+      <AnimatePresence>
+        {isMenuVisible && <MenuMobile setVisibility={setIsMenuVisible} />}
+      </AnimatePresence>
     </>
   )
 }
 
-const MenuMobile = () => {
+type MenuMobileProps = {
+  setVisibility: (visible: boolean) => void
+}
+
+const MenuMobile = ({ setVisibility }: MenuMobileProps) => {
   return (
     <S.MenuMobile
       key="menu"
@@ -54,7 +60,7 @@ const MenuMobile = () => {
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 0.1, ease: 'easeIn' }}
       exit={{ opacity: 0, y: -200 }}>
-      <Navigation isMobile />
+      <Navigation isMobile setVisibility={setVisibility} />
       <S.ContactWrapper>
         <Contact />
       </S.ContactWrapper>

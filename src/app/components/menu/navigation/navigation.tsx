@@ -3,21 +3,27 @@ import * as S from './style'
 
 type NavigationProps = {
   isMobile?: boolean
+  setVisibility?: (visible: boolean) => void
 }
 
-export const Navigation = ({ isMobile }: NavigationProps) => {
+export const Navigation = ({ isMobile, setVisibility }: NavigationProps) => {
+  const closeMenuMobile = () => {
+    if (isMobile && setVisibility) {
+      setVisibility(false)
+    }
+  }
   return (
     <S.Nav>
       <S.LinksList>
         {isMobile && (
-          <li>
+          <li onClick={closeMenuMobile}>
             <S.Link href={Routes.HOME}>Home</S.Link>
           </li>
         )}
-        <li>
+        <li onClick={closeMenuMobile}>
           <S.Link href={Routes.PROJECTS}>Projetos</S.Link>
         </li>
-        <li>
+        <li onClick={closeMenuMobile}>
           <S.Link href="#">Sobre</S.Link>
         </li>
       </S.LinksList>
