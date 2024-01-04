@@ -4,7 +4,21 @@ import * as S from './style'
 import { fadeIn } from '@/app/motion'
 import { Social } from '@/app/components/social'
 
-export const Hero = () => {
+type HeroProps = {
+  greeting?: string
+  name?: string
+  introductionStart?: string
+  highlight?: string
+  introductionEnd?: string
+}
+
+export const Hero = ({
+  greeting = '',
+  name = '',
+  introductionStart = '',
+  highlight = '',
+  introductionEnd = ''
+}: HeroProps) => {
   return (
     <S.HeroSection>
       <Container>
@@ -13,16 +27,15 @@ export const Hero = () => {
           initial="hidden"
           whileInView="show"
           viewport={{ once: true }}>
-          Hey! sou <S.Name> Gabriel Chelles</S.Name>
+          {greeting} <S.Name> {name} </S.Name>
         </S.Apresentation>
         <S.Description
           variants={fadeIn(0.4)}
           initial="hidden"
           whileInView="show"
           viewport={{ once: true }}>
-          Product Designer atualmente ajudando a{' '}
-          <S.Highlight> Gamers Club </S.Highlight> a se tornar a maior empresa
-          de esports do mundo!🤘
+          {introductionStart} <S.Highlight> {highlight} </S.Highlight>{' '}
+          {introductionEnd}
         </S.Description>
         <S.SocialWrapper
           variants={fadeIn(0.6)}
