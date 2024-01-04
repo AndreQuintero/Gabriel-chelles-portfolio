@@ -11,9 +11,10 @@ import { useRouter } from 'next/navigation'
 
 export type ProjectProps = {
   projects: Array<ProjectCardProps>
+  totalProjects?: number
 }
 
-export const Projects = ({ projects }: ProjectProps) => {
+export const Projects = ({ projects, totalProjects = 0 }: ProjectProps) => {
   const router = useRouter()
   return (
     <S.Wrapper>
@@ -23,7 +24,7 @@ export const Projects = ({ projects }: ProjectProps) => {
           <Button
             colorScheme="secondary"
             onClick={() => router.push(Routes.PROJECTS)}>
-            Ver todos os 12 projetos
+            Ver todos os {totalProjects} projetos
           </Button>
         </S.MoreProjects>
       </Container>
