@@ -11,11 +11,11 @@ import { useRouter } from 'next/navigation'
 
 export type ProjectProps = {
   projects: Array<ProjectCardProps>
-  totalProjects?: number
 }
 
-export const Projects = ({ projects, totalProjects = 0 }: ProjectProps) => {
+export const Projects = ({ projects }: ProjectProps) => {
   const router = useRouter()
+  const totalProjects = projects.length
   return (
     <S.Wrapper>
       <Container>
