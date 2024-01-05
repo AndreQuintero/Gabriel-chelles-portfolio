@@ -5,7 +5,12 @@ import { List } from '@/app/components/list'
 import { TextGrid } from '@/app/components/text-grid'
 import { fadeIn } from '@/app/motion'
 
-export const Goals = () => {
+type GoalsProps = {
+  goals: Array<string>
+  results: Array<string>
+}
+
+export const Goals = ({ goals, results }: GoalsProps) => {
   return (
     <Container>
       <S.Wraper>
@@ -18,15 +23,7 @@ export const Goals = () => {
               viewport={{ once: true }}>
               Objetivos
             </S.Title>
-            <List
-              space="small"
-              items={[
-                'Criar um marketplace.',
-                'Preservar a experiência física.',
-                'Entender novos comportamentos de compra durante a pandemia.',
-                'Identificar novas possibilidades para o negócio.'
-              ]}
-            />
+            <List space="small" items={goals} />
           </S.Details>
           <S.Details $position="right">
             <S.Title
@@ -36,14 +33,7 @@ export const Goals = () => {
               viewport={{ once: true }}>
               Resultados
             </S.Title>
-            <List
-              space="small"
-              items={[
-                'Marketplace integrado com uma experiência física do shopping.',
-                'Mais de 60 lojistas participando no dia que foi anunciado.',
-                'Entendimento sobre o público do Guatemi e seu comportamento de consumo durante a pandemia.'
-              ]}
-            />
+            <List space="small" items={results} />
           </S.Details>
         </TextGrid>
       </S.Wraper>

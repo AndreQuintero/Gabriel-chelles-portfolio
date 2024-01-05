@@ -2,8 +2,15 @@
 import { Container } from '@/app/components/container'
 import * as S from './style'
 import { fadeIn } from '@/app/motion'
+import { LinkData } from '@/app/graphql/types'
 
-export const Hero = () => {
+type HeroProps = {
+  title: string
+  subtitle: string
+  linkTitle: string
+  link: LinkData
+}
+export const Hero = ({ title, subtitle, linkTitle, link }: HeroProps) => {
   return (
     <S.Wrapper>
       <Container>
@@ -12,24 +19,23 @@ export const Hero = () => {
           initial="hidden"
           whileInView="show"
           viewport={{ once: true }}>
-          Transformando a experiência de compras no Shopping Iguatemi Fortaleza
+          {title}
         </S.Title>
         <S.Subtitle
           variants={fadeIn(0.4)}
           initial="hidden"
           whileInView="show"
           viewport={{ once: true }}>
-          Construindo um Marketplace inovador em sintonia com o “Novo Normal”
-          durante/pós pandemia e elevando o padrão de atendimento ao cliente.
+          {subtitle}
         </S.Subtitle>
         <S.VisitWrapper
           variants={fadeIn(0.6)}
           initial="hidden"
           whileInView="show"
           viewport={{ once: true }}>
-          <S.Text>Acesse o site</S.Text>
-          <S.Link href="https://www.iguatemifortaleza.com.br/" target="_blank">
-            https://www.iguatemifortaleza.com.br/
+          <S.Text>{linkTitle}</S.Text>
+          <S.Link href={link.link} target="_blank">
+            {link.text}
           </S.Link>
         </S.VisitWrapper>
       </Container>
