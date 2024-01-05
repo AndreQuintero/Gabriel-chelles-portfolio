@@ -16,6 +16,7 @@ export type HomeData = {
       url: string
     }
   }
+  projects: Array<ProjectData>
 }
 
 export type HomeProps = {
