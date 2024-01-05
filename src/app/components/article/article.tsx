@@ -4,6 +4,7 @@ import { Container } from '../container'
 import { TextGrid } from '../text-grid'
 import { ArticleGridType } from '@/app/templates/project/articles'
 import { fadeIn } from '@/app/motion'
+import { ImageData } from '@/app/graphql/types'
 
 export type ArticleProps = {
   title?: string
@@ -15,9 +16,8 @@ export type ArticleProps = {
   showcases?: Array<ImageArticleProps>
 }
 
-type ImageArticleProps = {
-  url: string
-  description: string
+export type ImageArticleProps = {
+  image: ImageData
   fullWidth?: boolean
 }
 
@@ -79,19 +79,19 @@ export const Article = ({
       {images.length > 0 && (
         <Container ignorePaddingOnMobile>
           <S.ImagesWrapper>
-            {images.map((image) => (
+            {images.map((image, index) => (
               <S.ImageWrapper
                 variants={fadeIn(0.2)}
                 initial="hidden"
                 whileInView="show"
                 viewport={{ once: true }}
-                key={image.url}>
+                key={`${image?.image?.imagem?.url}-${index}`}>
                 <S.Image
                   $gridtype={gridType}
                   $fullWidth={image.fullWidth}
-                  src={image.url}
+                  src={image?.image?.imagem?.url}
                   loading="lazy"
-                  alt={image.description}
+                  alt={image?.image?.description}
                 />
               </S.ImageWrapper>
             ))}
@@ -107,13 +107,13 @@ export const Article = ({
                 initial="hidden"
                 whileInView="show"
                 viewport={{ once: true }}
-                key={`showcase-${showcase.url}`}>
+                key={`showcase-${showcase?.image?.imagem?.url}-${index}`}>
                 <S.Image
                   $gridtype={gridType}
                   $fullWidth={true}
-                  src={showcase.url}
+                  src={showcase?.image?.imagem?.url}
                   loading="lazy"
-                  alt={showcase.description}
+                  alt={showcase?.image?.description}
                 />
               </S.ImageWrapper>
             ))}

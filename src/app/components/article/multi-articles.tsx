@@ -75,12 +75,13 @@ export const MultiArticles = ({ articles }: MultiArticlesProps) => {
                     whileInView="show"
                     viewport={{ once: true }}>
                     {article.images?.map((image, index) => (
-                      <S.ImageWrapper key={`${image.url}-${index}A`}>
+                      <S.ImageWrapper
+                        key={`${image?.image?.imagem?.url}-${index}A`}>
                         <S.Image
                           $gridtype="multi"
-                          src={image.url}
+                          src={image?.image?.imagem?.url}
                           loading="lazy"
-                          alt={image.description}
+                          alt={image.image.description}
                         />
                       </S.ImageWrapper>
                     ))}
@@ -92,12 +93,13 @@ export const MultiArticles = ({ articles }: MultiArticlesProps) => {
                     viewport={{ once: true }}>
                     {articleEven &&
                       articleEven.images?.map((image, index) => (
-                        <S.ImageWrapper key={`${image.url}-${index + 1}B`}>
+                        <S.ImageWrapper
+                          key={`${image?.image?.imagem?.url}-${index + 1}B`}>
                           <S.Image
                             $gridtype="multi"
-                            src={image.url}
+                            src={image?.image?.imagem?.url}
                             loading="lazy"
-                            alt={image.description}
+                            alt={image?.image?.description}
                           />
                         </S.ImageWrapper>
                       ))}
