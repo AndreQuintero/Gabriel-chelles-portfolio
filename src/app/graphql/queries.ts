@@ -4,7 +4,6 @@ export const HOME = gql`
   query home {
     homes {
       greeting
-      name
       introductionStart
       highlight
       introductionEnd
@@ -20,12 +19,23 @@ export const HOME = gql`
           url
         }
       }
+      projects {
+        id
+        slug
+        title
+        imagesThumb {
+          description
+          imagem {
+            url
+          }
+        }
+      }
     }
   }
 `
-export const PROJECTS_FIRST_FOUR = gql`
+export const PROJECTS = gql`
   query Projects {
-    projects(first: 4) {
+    projects {
       id
       slug
       title
