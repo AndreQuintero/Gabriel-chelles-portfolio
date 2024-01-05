@@ -22,7 +22,6 @@ const getProjects = (data: HomeData) => {
 export default async function Home() {
   const homeData = await getHomeData()
   const projectData = getProjects(homeData!)
-  const totalProjects = projectData.length
   return (
     <main>
       <Hero
@@ -33,7 +32,7 @@ export default async function Home() {
         introductionEnd={homeData?.introductionEnd}
       />
       <Video url={homeData?.videoLink} />
-      <Projects projects={projectData} totalProjects={totalProjects} />
+      <Projects projects={projectData} />
     </main>
   )
 }
