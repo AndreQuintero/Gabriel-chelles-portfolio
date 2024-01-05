@@ -8,7 +8,6 @@ type VideoProps = {
 }
 
 export const Video = ({ url }: VideoProps) => {
-  console.log(url)
   return (
     <>
       {!!url && (
