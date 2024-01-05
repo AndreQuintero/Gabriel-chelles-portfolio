@@ -8,6 +8,8 @@ import { Hero } from '@/app/templates/project/hero'
 import { NextPageSession as NextPage } from '@/app/templates/project/next-page'
 import { Summary } from '@/app/templates/project/summary'
 
+export const dynamicParams = false
+
 export async function generateStaticParams() {
   const data: ProjectsProps = await hygraph.request(PROJECTS)
   return data?.projects?.map((project) => ({
