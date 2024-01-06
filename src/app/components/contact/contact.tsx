@@ -1,23 +1,16 @@
+import { ContactProps } from '@/app/graphql/types'
 import { Social } from '../social'
 import * as S from './style'
 
-export const Contact = () => {
+export const Contact = ({ greeting, email, ...props }: ContactProps) => {
   return (
     <S.Wrapper>
-      <S.Greetings>Sinta-se a vontade para dizer um “Olá”</S.Greetings>
-      <S.Email as="a" href="mailto:contato@gabrielchelles.com">
-        contato@gabrielchelles.com
+      <S.Greetings>{greeting}</S.Greetings>
+      <S.Email as="a" href={`mailto:${email}`}>
+        {email}
       </S.Email>
       <S.SocialWrapper>
-        <Social
-          linkedin={{
-            link: 'https://www.linkedin.com/in/gabrielchelles/',
-            text: '/gabrielchelles'
-          }}
-          resume={{ url: 'https://media.graphassets.com/Du2RfITYQYiW2IpiN1nQ' }}
-          resumeDownloadText="Gabriel_Chelles-Resume"
-          resumeText="Download CV"
-        />
+        <Social {...props} />
       </S.SocialWrapper>
     </S.Wrapper>
   )
