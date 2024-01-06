@@ -1,5 +1,3 @@
-import { CompanyCard, CompanyCardProps } from './company-card'
+import { CompanyCard } from './company-card'
 
 export { CompanyCard }
-
-export type { CompanyCardProps }
