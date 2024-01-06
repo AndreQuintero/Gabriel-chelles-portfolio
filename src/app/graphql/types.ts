@@ -70,8 +70,15 @@ type SectionArticleData = {
   articles: Array<ArticleProps>
 }
 
-export type ImageArticleData = Pick<ImageArticleProps, 'fullWidth'> & {
-  image: ImageData
+export type FooterProps = {
+  footers: Array<FooterData>
+}
+
+export type FooterData = {
+  title: string
+  subtitle: string
+  companies: Array<ImageData>
+  contact: ContactProps
 }
 
 export type ImageData = {
