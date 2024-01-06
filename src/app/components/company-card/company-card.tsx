@@ -1,14 +1,10 @@
+import { ImageData } from '@/app/graphql/types'
 import * as S from './style'
 
-export type CompanyCardProps = {
-  url: string
-  companyName: string
-}
-
-export const CompanyCard = ({ url, companyName }: CompanyCardProps) => {
+export const CompanyCard = ({ imagem, description }: ImageData) => {
   return (
     <S.Wrapper>
-      <S.Image loading="lazy" src={url} alt={companyName} />
+      <S.Image loading="lazy" src={imagem.url} alt={description} />
     </S.Wrapper>
   )
 }
