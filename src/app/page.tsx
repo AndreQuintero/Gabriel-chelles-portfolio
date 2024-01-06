@@ -30,6 +30,7 @@ export default async function Home() {
         introductionStart={homeData?.introductionStart}
         highlight={homeData?.highlight}
         introductionEnd={homeData?.introductionEnd}
+        contact={homeData!.contact}
       />
       <Video url={homeData?.videoLink} />
       <Projects projects={projectData} />
