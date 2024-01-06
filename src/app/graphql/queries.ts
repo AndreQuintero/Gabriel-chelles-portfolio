@@ -1,5 +1,7 @@
 import { gql } from 'graphql-request'
 
+const limit = process.env.LIMIT_PER_ROW
+
 export const HOME = gql`
   query home {
     homes {
@@ -21,7 +23,7 @@ export const HOME = gql`
           text
         }
       }
-      projects {
+      projects(last: ${limit}) {
         id
         slug
         title
@@ -37,7 +39,7 @@ export const HOME = gql`
 `
 export const PROJECTS = gql`
   query Projects {
-    projects {
+    projects(last: ${limit}) {
       id
       slug
       title
@@ -73,9 +75,9 @@ export const CASE = gql`
       projectYear
       goals
       results
-      sectionArticles {
+      sectionArticles(last: ${limit}) {
         sectionType
-        articles {
+        articles(last: ${limit}) {
           title
           introduction
           items
@@ -113,6 +115,34 @@ export const CASE = gql`
           imagem {
             url
           }
+        }
+      }
+    }
+  }
+`
+
+export const FOOTER = gql`
+  query footer {
+    footers {
+      title
+      subtitle
+      companies(last: ${limit}) {
+        description
+        imagem {
+          url
+        }
+      }
+      contact {
+        greeting
+        email
+        resumeText
+        resumeDownloadText
+        resume {
+          url
+        }
+        linkedin {
+          link
+          text
         }
       }
     }
