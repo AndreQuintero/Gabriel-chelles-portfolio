@@ -3,6 +3,7 @@ import { Container } from '@/app/components/container'
 import * as S from './style'
 import { fadeIn } from '@/app/motion'
 import { Social } from '@/app/components/social'
+import { ContactProps } from '@/app/graphql/types'
 
 type HeroProps = {
   greeting?: string
@@ -10,6 +11,7 @@ type HeroProps = {
   introductionStart?: string
   highlight?: string
   introductionEnd?: string
+  contact: ContactProps
 }
 
 export const Hero = ({
@@ -17,7 +19,8 @@ export const Hero = ({
   name = '',
   introductionStart = '',
   highlight = '',
-  introductionEnd = ''
+  introductionEnd = '',
+  contact
 }: HeroProps) => {
   return (
     <S.HeroSection>
@@ -42,7 +45,7 @@ export const Hero = ({
           initial="hidden"
           whileInView="show"
           viewport={{ once: true }}>
-          <Social />
+          <Social {...contact} />
         </S.SocialWrapper>
       </Container>
     </S.HeroSection>
