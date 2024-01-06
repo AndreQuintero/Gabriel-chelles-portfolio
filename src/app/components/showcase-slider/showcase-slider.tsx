@@ -24,9 +24,9 @@ export const ShowCaseSlider = ({ companies }: ShowcaseProps) => {
       <Slider {...settings}>
         {companies.map((company) => (
           <CompanyCard
-            key={company.companyName}
-            url={company.url}
-            companyName={company.companyName}
+            key={company?.description}
+            description={company.description}
+            imagem={company.imagem}
           />
         ))}
       </Slider>
