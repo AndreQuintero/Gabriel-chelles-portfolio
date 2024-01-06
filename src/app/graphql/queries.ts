@@ -11,12 +11,14 @@ export const HOME = gql`
       contact {
         greeting
         email
-        linkedinButton {
-          link
-          text
-        }
+        resumeText
+        resumeDownloadText
         resume {
           url
+        }
+        linkedin {
+          link
+          text
         }
       }
       projects {

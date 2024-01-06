@@ -8,15 +8,19 @@ export type HomeData = {
   highlight: string
   introductionEnd: string
   videoLink: string
-  contact: {
-    greeting: string
-    email: string
-    linkedinButton: LinkData
-    resume: {
-      url: string
-    }
-  }
+  contact: ContactProps
   projects: Array<ProjectData>
+}
+
+export type ContactProps = {
+  greeting?: string
+  email?: string
+  resumeText: string
+  resumeDownloadText: string
+  resume: {
+    url: string
+  }
+  linkedin: LinkData
 }
 
 export type HomeProps = {
