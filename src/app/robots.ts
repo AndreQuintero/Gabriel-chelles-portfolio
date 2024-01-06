@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: '/',
       disallow: '/private/'
     },
-    sitemap: 'https://gabrielchelles.ux/sitemap.xml'
+    sitemap: `${process.env.DOMAIN}/sitemap.xml`
   }
 }
