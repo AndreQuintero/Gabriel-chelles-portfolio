@@ -67,6 +67,9 @@ export const metadata: Metadata = {
     siteName: 'Gabriel Chelles Portfolio',
     title: 'Gabriel Chelles',
     url: process.env.DOMAIN
+  },
+  other: {
+    'google-site-verification': 'nzxL1F20M2is2Rr4Ptbpp0LZS7YxEmzuXfAJJBRLNBU'
   }
 }
 
