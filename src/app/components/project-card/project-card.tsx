@@ -11,6 +11,7 @@ export type ProjectCardProps = {
   title: string
   slug: string
   images: Array<ImageProps>
+  updatedAt?: string
 }
 
 export const ProjectCard = ({ title, slug, images }: ProjectCardProps) => {

@@ -32,6 +32,7 @@ export type ProjectData = {
   slug: string
   title: string
   imagesThumb: Array<ImageData>
+  updatedAt?: string
 }
 
 export type ProjectsProps = {

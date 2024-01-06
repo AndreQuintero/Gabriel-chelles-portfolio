@@ -49,6 +49,7 @@ export const PROJECTS = gql`
           url
         }
       }
+      updatedAt
     }
   }
 `
