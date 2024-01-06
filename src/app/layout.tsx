@@ -9,6 +9,9 @@ import { GlobalCss } from './style/global'
 import { Menu } from './components/menu'
 import { ThemeProvider } from './providers/ThemeProvider'
 import { Footer } from './components/footer'
+import { hygraph } from './graphql/client'
+import { FOOTER } from './graphql/queries'
+import { FooterProps } from './graphql/types'
 
 export const poppins = Poppins({
   subsets: ['latin'],
@@ -33,11 +36,20 @@ export const viewport: Viewport = {
   themeColor: '#000'
 }
 
-export default function RootLayout({
+export const revalidate = process.env.REVALIDATE_TIME
+
+const getfFooter = async () => {
+  const data: FooterProps = await hygraph.request(FOOTER)
+  if (!data) throw Error('Error to fetch Footer data!')
+  return data.footers[0]
+}
+
+export default async function RootLayout({
   children
 }: {
   children: React.ReactNode
 }) {
+  const data = await getfFooter()
   return (
     <html lang="pt-br">
       <body className={outfit.className}>
@@ -45,9 +57,9 @@ export default function RootLayout({
           <ThemeProvider>
             <Wrapper>
               <GlobalCss />
-              <Menu />
+              <Menu {...data.contact} />
               {children}
-              <Footer />
+              <Footer {...data} />
             </Wrapper>
           </ThemeProvider>
         </StyledComponentsRegistry>
