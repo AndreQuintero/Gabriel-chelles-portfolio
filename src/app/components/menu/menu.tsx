@@ -11,8 +11,9 @@ import { MenuIconOpened, MenuItemClosed } from './menu-icon'
 import { Contact } from '../contact'
 import { Link } from '../link'
 import { Routes } from '@/app/routes'
+import { ContactProps } from '@/app/graphql/types'
 
-const Menu = () => {
+const Menu = ({ ...props }: ContactProps) => {
   const { isMobile } = useViewDetect()
   const { colors } = useTheme()
   const [isMenuVisible, setIsMenuVisible] = useState(false)
@@ -42,7 +43,9 @@ const Menu = () => {
         )}
       </S.Header>
       <AnimatePresence>
-        {isMenuVisible && <MenuMobile setVisibility={setIsMenuVisible} />}
+        {isMenuVisible && (
+          <MenuMobile {...props} setVisibility={setIsMenuVisible} />
+        )}
       </AnimatePresence>
     </>
   )
@@ -50,9 +53,9 @@ const Menu = () => {
 
 type MenuMobileProps = {
   setVisibility: (visible: boolean) => void
-}
+} & ContactProps
 
-const MenuMobile = ({ setVisibility }: MenuMobileProps) => {
+const MenuMobile = ({ setVisibility, ...props }: MenuMobileProps) => {
   return (
     <S.MenuMobile
       key="menu"
@@ -62,7 +65,7 @@ const MenuMobile = ({ setVisibility }: MenuMobileProps) => {
       exit={{ opacity: 0, y: -200 }}>
       <Navigation isMobile setVisibility={setVisibility} />
       <S.ContactWrapper>
-        <Contact />
+        <Contact {...props} />
       </S.ContactWrapper>
     </S.MenuMobile>
   )
