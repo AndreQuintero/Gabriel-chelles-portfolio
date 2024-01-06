@@ -9,7 +9,15 @@ export const Contact = () => {
         contato@gabrielchelles.com
       </S.Email>
       <S.SocialWrapper>
-        <Social />
+        <Social
+          linkedin={{
+            link: 'https://www.linkedin.com/in/gabrielchelles/',
+            text: '/gabrielchelles'
+          }}
+          resume={{ url: 'https://media.graphassets.com/Du2RfITYQYiW2IpiN1nQ' }}
+          resumeDownloadText="Gabriel_Chelles-Resume"
+          resumeText="Download CV"
+        />
       </S.SocialWrapper>
     </S.Wrapper>
   )
