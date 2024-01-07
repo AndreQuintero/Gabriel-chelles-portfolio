@@ -5,7 +5,7 @@ import media from 'styled-media-query'
 export const HeroSection = styled.section`
   margin-top: 6.4rem;
   ${media.greaterThan('medium')`
-        margin-top: 19.6rem;
+        margin-top: 12.8rem;
     `}
 `
 
