@@ -12,6 +12,7 @@ import { Footer } from './components/footer'
 import { hygraph } from './graphql/client'
 import { FOOTER } from './graphql/queries'
 import { FooterProps } from './graphql/types'
+import { Hotjar } from './components/hotjar'
 
 export const poppins = Poppins({
   subsets: ['latin'],
@@ -29,7 +30,7 @@ export const outfit = Outfit({
 
 export const metadata: Metadata = {
   title: 'Gabriel Chelles Portfolio',
-  description: 'Gabriel Chelles UX/UI designer',
+  description: 'Gabriel Chelles Product|UX|UI design',
   applicationName: 'Gabriel Chelles Portfolio',
   abstract: 'Portfolio de Gabriel Chelles contendo todos os seus projetos',
   appleWebApp: {
@@ -56,9 +57,46 @@ export const metadata: Metadata = {
     'design',
     'figma',
     'blog',
-    'react',
-    'next js',
-    'vercel'
+    'photoshop',
+    'illustrator',
+    'after effects',
+    'premiere',
+    'hotjar',
+    'analytics',
+    'responsive web design',
+    'teste de usabilidade',
+    'usabilty test',
+    'product discovery',
+    'qualitative research',
+    'pesquisa qualitativa',
+    'quantitative research',
+    'pesquisa quantitativa',
+    'interface',
+    'product delivery',
+    'handoff',
+    'typography',
+    'tipografia',
+    'product strategy',
+    'estratégia',
+    'user flows',
+    'user stories',
+    'visual design',
+    'prototyping',
+    'protótipo',
+    'design system',
+    'user research',
+    'pesquisa com usuário',
+    'mobile',
+    'design sprint',
+    'interaction design',
+    'design thinking',
+    'user interview',
+    'information architecture',
+    'customer journey map',
+    'heuristics analysis',
+    'wireframing',
+    'workshop facilitation',
+    'data informed design'
   ],
   publisher: 'Vercel',
   openGraph: {
@@ -68,9 +106,7 @@ export const metadata: Metadata = {
     title: 'Gabriel Chelles',
     url: process.env.DOMAIN
   },
-  other: {
-    'google-site-verification': 'nzxL1F20M2is2Rr4Ptbpp0LZS7YxEmzuXfAJJBRLNBU'
-  },
+
   metadataBase: new URL(process.env.DOMAIN!)
 }
 
@@ -94,6 +130,9 @@ export default async function RootLayout({
   const data = await getfFooter()
   return (
     <html lang="pt-br">
+      <head>
+        <Hotjar />
+      </head>
       <body className={outfit.className}>
         <StyledComponentsRegistry>
           <ThemeProvider>
