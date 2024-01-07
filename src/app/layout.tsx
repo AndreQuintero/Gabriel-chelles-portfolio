@@ -70,7 +70,8 @@ export const metadata: Metadata = {
   },
   other: {
     'google-site-verification': 'nzxL1F20M2is2Rr4Ptbpp0LZS7YxEmzuXfAJJBRLNBU'
-  }
+  },
+  metadataBase: new URL(process.env.DOMAIN!)
 }
 
 export const viewport: Viewport = {
