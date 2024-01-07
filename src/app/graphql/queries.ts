@@ -6,6 +6,7 @@ export const HOME = gql`
   query home {
     homes {
       greeting
+      name
       introductionStart
       highlight
       introductionEnd
