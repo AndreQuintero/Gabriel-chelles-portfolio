@@ -20,10 +20,10 @@ export const Video = ({ url }: VideoProps) => {
             <iframe
               width="560"
               height="315"
-              src={`${url}&autoplay=1&mute=1`}
+              src={`${url}&autoplay=1&mute=1&loop=1&controls=0`}
               title="YouTube video player"
               loading="lazy"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; mute"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; mute; loop; controls"
               allowFullScreen></iframe>
           </S.Wrapper>
         </Container>
