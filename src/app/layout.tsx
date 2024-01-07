@@ -13,6 +13,7 @@ import { hygraph } from './graphql/client'
 import { FOOTER } from './graphql/queries'
 import { FooterProps } from './graphql/types'
 import { Hotjar } from './components/hotjar'
+import { GoogleAnalytics } from './components/google-analytics'
 
 export const poppins = Poppins({
   subsets: ['latin'],
@@ -131,6 +132,7 @@ export default async function RootLayout({
   return (
     <html lang="pt-br">
       <head>
+        <GoogleAnalytics />
         <Hotjar />
       </head>
       <body className={outfit.className}>
