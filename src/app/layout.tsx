@@ -14,6 +14,7 @@ import { FOOTER } from './graphql/queries'
 import { FooterProps } from './graphql/types'
 import { Hotjar } from './components/hotjar'
 import { GoogleAnalytics } from './components/google-analytics'
+import { MenuProvider } from './providers/MenuProvider'
 
 export const poppins = Poppins({
   subsets: ['latin'],
@@ -140,7 +141,9 @@ export default async function RootLayout({
           <ThemeProvider>
             <Wrapper>
               <GlobalCss />
-              <Menu {...data.contact} />
+              <MenuProvider visible={false}>
+                <Menu {...data.contact} />
+              </MenuProvider>
               {children}
               <Footer {...data} />
             </Wrapper>
