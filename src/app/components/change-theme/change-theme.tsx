@@ -2,7 +2,7 @@
 import { ReactNode, useEffect } from 'react'
 import { ObserverComponentVisibility } from '../observer-component-visibility'
 import { Theme } from '@/app/style/theme'
-import { useTheme } from '@/app/providers/ThemeProvider'
+import { useTheme } from '@/app/hooks'
 import { usePathname } from 'next/navigation'
 
 type ChangeThemeProps = {

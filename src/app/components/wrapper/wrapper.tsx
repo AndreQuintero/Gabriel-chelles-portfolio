@@ -2,7 +2,7 @@
 import { ReactNode } from 'react'
 import { ThemeProvider } from 'styled-components'
 import { darkTheme, lightTheme, Theme } from '@/app/style/theme'
-import { useTheme } from '@/app/providers/ThemeProvider'
+import { useTheme } from '@/app/hooks'
 
 type Props = {
   children: ReactNode

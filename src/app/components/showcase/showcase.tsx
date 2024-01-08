@@ -1,4 +1,4 @@
-import { useViewDetect } from '@/app/hooks/useViewDetect'
+import { useViewDetect } from '@/app/hooks'
 import { CompanyCard } from '../company-card'
 import { Container } from '../container'
 import { ShowCaseSlider } from '../showcase-slider'
