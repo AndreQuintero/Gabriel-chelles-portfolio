@@ -1,6 +1,6 @@
 import { Article, MultiArticles } from '@/app/components/article'
 import { ArticleSection } from './articles'
-import { useViewDetect } from '@/app/hooks/useViewDetect'
+import { useViewDetect } from '@/app/hooks'
 
 type SingleArticlesProps = Pick<ArticleSection, 'articles'>
 export const SingleArticlesSection = ({ articles }: SingleArticlesProps) => {
