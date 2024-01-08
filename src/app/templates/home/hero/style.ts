@@ -37,8 +37,14 @@ export const Description = styled(motion.h1)`
   `}
 `
 
-export const Highlight = styled.span`
-  color: #1a70d0;
+export const Highlight = styled.a<{ $color: string }>`
+  ${({ $color }) => css`
+    color: ${$color};
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
+  `}
 `
 export const SocialWrapper = styled(motion.div)`
   margin-top: 4.8rem;

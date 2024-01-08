@@ -3,22 +3,24 @@ import { Container } from '@/app/components/container'
 import * as S from './style'
 import { fadeIn } from '@/app/motion'
 import { Social } from '@/app/components/social'
-import { ContactProps } from '@/app/graphql/types'
+import { ContactProps, LinkData } from '@/app/graphql/types'
 
 type HeroProps = {
   greeting?: string
   name?: string
   introductionStart?: string
-  highlight?: string
+  highlight?: LinkData
   introductionEnd?: string
   contact: ContactProps
+  color: string
 }
 
 export const Hero = ({
   greeting = '',
   name = '',
   introductionStart = '',
-  highlight = '',
+  highlight,
+  color,
   introductionEnd = '',
   contact
 }: HeroProps) => {
@@ -37,7 +39,17 @@ export const Hero = ({
           initial="hidden"
           whileInView="show"
           viewport={{ once: true }}>
-          {introductionStart} <S.Highlight> {highlight} </S.Highlight>{' '}
+          {introductionStart}{' '}
+          {highlight && (
+            <S.Highlight
+              href={highlight.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              $color={color}>
+              {' '}
+              {highlight.text}{' '}
+            </S.Highlight>
+          )}{' '}
           {introductionEnd}
         </S.Description>
         <S.SocialWrapper
