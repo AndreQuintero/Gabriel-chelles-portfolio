@@ -31,12 +31,12 @@ export const outfit = Outfit({
 })
 
 export const metadata: Metadata = {
-  title: 'Gabriel Chelles Portfolio',
+  title: 'Gabriel Chelles Product Design',
   description: 'Gabriel Chelles Product|UX|UI design',
-  applicationName: 'Gabriel Chelles Portfolio',
+  applicationName: 'Gabriel Chelles Product Design',
   abstract: 'Portfolio de Gabriel Chelles contendo todos os seus projetos',
   appleWebApp: {
-    title: 'Gabriel Chelles Portfolio',
+    title: 'Gabriel Chelles Product Design',
     statusBarStyle: 'black-translucent'
   },
   authors: {
@@ -104,7 +104,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     description: 'Portfolio de Gabriel Chelles contendo todos os seus projetos',
-    siteName: 'Gabriel Chelles Portfolio',
+    siteName: 'Gabriel Chelles Product Design',
     title: 'Gabriel Chelles',
     url: process.env.DOMAIN
   },
@@ -118,7 +118,7 @@ export const viewport: Viewport = {
 
 export const revalidate = process.env.REVALIDATE_TIME
 
-const getfFooter = async () => {
+const getFooter = async () => {
   const data: FooterProps = await hygraph.request(FOOTER)
   if (!data) throw Error('Error to fetch Footer data!')
   return data.footers[0]
@@ -129,7 +129,7 @@ export default async function RootLayout({
 }: {
   children: React.ReactNode
 }) {
-  const data = await getfFooter()
+  const data = await getFooter()
   return (
     <html lang="pt-br">
       <head>
