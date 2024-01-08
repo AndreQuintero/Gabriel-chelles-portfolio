@@ -8,7 +8,13 @@ export const HOME = gql`
       greeting
       name
       introductionStart
-      highlight
+      highlight {
+        link
+        text
+      }
+      highlightColor {
+        hex
+      }
       introductionEnd
       videoLink
       contact {

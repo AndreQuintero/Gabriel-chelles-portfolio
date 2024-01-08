@@ -5,7 +5,8 @@ export type HomeData = {
   greeting: string
   name: string
   introductionStart: string
-  highlight: string
+  highlight: LinkData
+  highlightColor: ColorData
   introductionEnd: string
   videoLink: string
   contact: ContactProps
@@ -58,9 +59,7 @@ export type CaseData = {
   sectionArticles: Array<SectionArticleData>
   nextPage: {
     project: ProjectData
-    color: {
-      hex: string
-    }
+    color: ColorData
     textColor: 'light' | 'dark'
     image: ImageData
   }
@@ -92,4 +91,8 @@ export type ImageData = {
 export type LinkData = {
   link: string
   text: string
+}
+
+export type ColorData = {
+  hex: string
 }
