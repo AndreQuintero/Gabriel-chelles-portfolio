@@ -8,7 +8,9 @@ type ThemeContextProps = {
   setTheme: (theme: Theme) => void
 }
 
-const ThemeContext = createContext<ThemeContextProps | undefined>(undefined)
+export const ThemeContext = createContext<ThemeContextProps | undefined>(
+  undefined
+)
 
 // Create a provider component that will wrap your app
 interface ThemeProviderProps {
@@ -32,14 +34,4 @@ export const ThemeProvider: React.FC<ThemeProviderProps> = ({ children }) => {
       {children}
     </ThemeContext.Provider>
   )
-}
-
-// Create a custom hook to consume the theme context
-export const useTheme = () => {
-  const context = useContext(ThemeContext)
-  if (!context) {
-    throw new Error('useTheme must be used within a ThemeProvider')
-  }
-  const { theme, setTheme } = context
-  return { theme, setTheme }
 }
