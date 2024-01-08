@@ -31,12 +31,12 @@ export const outfit = Outfit({
 })
 
 export const metadata: Metadata = {
-  title: 'Gabriel Chelles Product Design',
-  description: 'Gabriel Chelles Product|UX|UI design',
-  applicationName: 'Gabriel Chelles Product Design',
+  title: 'Gabriel Chelles Product Designer',
+  description: 'Gabriel Chelles Product|UX|UI designer',
+  applicationName: 'Gabriel Chelles Product Designer',
   abstract: 'Portfolio de Gabriel Chelles contendo todos os seus projetos',
   appleWebApp: {
-    title: 'Gabriel Chelles Product Design',
+    title: 'Gabriel Chelles Product Designer',
     statusBarStyle: 'black-translucent'
   },
   authors: {
@@ -104,7 +104,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     description: 'Portfolio de Gabriel Chelles contendo todos os seus projetos',
-    siteName: 'Gabriel Chelles Product Design',
+    siteName: 'Gabriel Chelles Product Designer',
     title: 'Gabriel Chelles',
     url: process.env.DOMAIN
   },
