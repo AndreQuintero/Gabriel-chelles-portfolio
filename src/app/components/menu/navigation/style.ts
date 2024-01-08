@@ -16,8 +16,8 @@ export const LinksList = styled.ul`
     height: 100%;
   `}
 `
-export const Link = styled(LinkComponent)`
-  ${({ theme }) => css`
+export const Link = styled(LinkComponent)<{ $isActive: boolean }>`
+  ${({ theme, $isActive }) => css`
     font-family: ${theme.fonts.style.secondary};
     font-size: 2.8rem;
     font-style: normal;
@@ -33,9 +33,9 @@ export const Link = styled(LinkComponent)`
     &::after {
       content: '';
       display: block;
-      width: 0;
+      width: ${$isActive ? '33%' : 0};
       position: absolute;
-      background: transparent;
+      background: ${$isActive ? theme.colors.secondary : 'transparent'};
       transition: all 0.3s;
       height: 2px;
       left: 0;
