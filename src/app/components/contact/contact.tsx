@@ -4,7 +4,7 @@ import * as S from './style'
 
 export const Contact = ({ greeting, email, ...props }: ContactProps) => {
   return (
-    <S.Wrapper>
+    <S.Wrapper id="contact">
       <S.Greetings>{greeting}</S.Greetings>
       <S.Email as="a" href={`mailto:${email}`}>
         {email}
