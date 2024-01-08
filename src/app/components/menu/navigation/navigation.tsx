@@ -1,20 +1,17 @@
 import { Routes } from '@/app/routes'
 import * as S from './style'
 import { usePathname } from 'next/navigation'
+import { useMenuVisibility } from '@/app/hooks'
 
 type NavigationProps = {
   isMobile?: boolean
-  setVisibility?: (visible: boolean) => void
 }
 
-export const Navigation = ({ isMobile, setVisibility }: NavigationProps) => {
+export const Navigation = ({ isMobile }: NavigationProps) => {
   const pathname = usePathname()
-  const closeMenuMobile = () => {
-    if (isMobile && setVisibility) {
-      setVisibility(false)
-    }
-  }
+  const { setVisibility } = useMenuVisibility()
   const isActive = (route: string) => pathname === route
+  const closeMenuMobile = () => setVisibility(false)
 
   return (
     <S.Nav>

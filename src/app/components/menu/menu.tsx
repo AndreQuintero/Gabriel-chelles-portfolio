@@ -3,7 +3,7 @@ import { useTheme } from 'styled-components'
 import { useEffect, useState } from 'react'
 import { AnimatePresence } from 'framer-motion'
 
-import { useViewDetect } from '@/app/hooks/useViewDetect'
+import { useMenuVisibility, useViewDetect } from '@/app/hooks'
 import * as S from './style'
 
 import { Navigation } from './navigation'
@@ -16,17 +16,18 @@ import { ContactProps } from '@/app/graphql/types'
 const Menu = ({ ...props }: ContactProps) => {
   const { isMobile } = useViewDetect()
   const { colors } = useTheme()
-  const [isMenuVisible, setIsMenuVisible] = useState(false)
+  const { isVisible, setVisibility } = useMenuVisibility()
 
-  const toggleMenu = () => setIsMenuVisible(!isMenuVisible)
+  const toggleMenu = () => setVisibility(!isVisible)
 
   useEffect(() => {
-    document.body.style.overflow = isMenuVisible ? 'hidden' : 'visible'
-  }, [isMenuVisible])
+    document.body.style.overflow = isVisible ? 'hidden' : 'visible'
+  }, [isVisible])
+
   return (
     <>
       <S.Header>
-        <Link href={Routes.HOME}>
+        <Link href={Routes.HOME} onClick={() => setVisibility(false)}>
           <S.PortfolioName>Gabriel Chelles</S.PortfolioName>
         </Link>
         {!isMobile && isMobile !== undefined && (
@@ -34,7 +35,7 @@ const Menu = ({ ...props }: ContactProps) => {
         )}
         {isMobile && (
           <div onClick={toggleMenu}>
-            {!isMenuVisible ? (
+            {!isVisible ? (
               <MenuIconOpened color={colors.secondary} />
             ) : (
               <MenuItemClosed color={colors.secondary} />
@@ -43,19 +44,15 @@ const Menu = ({ ...props }: ContactProps) => {
         )}
       </S.Header>
       <AnimatePresence>
-        {isMenuVisible && (
-          <MenuMobile {...props} setVisibility={setIsMenuVisible} />
-        )}
+        {isVisible && <MenuMobile {...props} />}
       </AnimatePresence>
     </>
   )
 }
 
-type MenuMobileProps = {
-  setVisibility: (visible: boolean) => void
-} & ContactProps
+type MenuMobileProps = {} & ContactProps
 
-const MenuMobile = ({ setVisibility, ...props }: MenuMobileProps) => {
+const MenuMobile = ({ ...props }: MenuMobileProps) => {
   return (
     <S.MenuMobile
       key="menu"
@@ -63,7 +60,7 @@ const MenuMobile = ({ setVisibility, ...props }: MenuMobileProps) => {
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 0.1, ease: 'easeIn' }}
       exit={{ opacity: 0, y: -200 }}>
-      <Navigation isMobile setVisibility={setVisibility} />
+      <Navigation isMobile />
       <S.ContactWrapper>
         <Contact {...props} />
       </S.ContactWrapper>
