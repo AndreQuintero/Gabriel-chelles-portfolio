@@ -44,6 +44,7 @@ export const Link = styled(LinkComponent)<{ $isActive: boolean }>`
 
       ${media.greaterThan('medium')`
         margin: 2.5rem auto;
+        pointer-events: none;
       `}
     }
     &:hover::after {
