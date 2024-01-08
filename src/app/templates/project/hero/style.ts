@@ -66,5 +66,8 @@ export const Link = styled.a`
     ${media.greaterThan('medium')`
         font-size: 2.4rem;
     `}
+    &:hover {
+      color: #308cf4;
+    }
   `}
 `

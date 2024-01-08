@@ -28,6 +28,9 @@ export const Email = styled.h1`
     ${media.greaterThan('medium')`
         font-size: 6rem;
     `}
+    &:hover {
+      color: #308cf4;
+    }
   `}
 `
 
