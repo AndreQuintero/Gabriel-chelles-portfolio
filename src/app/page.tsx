@@ -1,4 +1,3 @@
-import { ImageProps, ProjectCardProps } from './components/project-card'
 import { hygraph } from './graphql/client'
 import { HOME } from './graphql/queries'
 import { HomeData, HomeProps } from './graphql/types'
@@ -11,7 +10,7 @@ export const revalidate = process.env.REVALIDATE_TIME
 
 const getHomeData = async () => {
   const data: HomeProps = await hygraph.request(HOME)
-  if (!data) return null
+  if (!data) throw new Error('Error to fetch home data')
   return data.homes[0]
 }
 
@@ -21,7 +20,8 @@ const getProjects = (data: HomeData) => {
 
 export default async function Home() {
   const homeData = await getHomeData()
-  const projectData = getProjects(homeData!)
+  const projectData = getProjects(homeData)
+
   return (
     <main>
       <Hero
@@ -30,6 +30,7 @@ export default async function Home() {
         introductionStart={homeData?.introductionStart}
         highlight={homeData?.highlight}
         introductionEnd={homeData?.introductionEnd}
+        color={homeData.highlightColor.hex}
         contact={homeData!.contact}
       />
       <Video url={homeData?.videoLink} />
