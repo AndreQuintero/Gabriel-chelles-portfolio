@@ -32,9 +32,9 @@ export const outfit = Outfit({
 
 export const metadata: Metadata = {
   title: 'Gabriel Chelles Product Designer',
-  description: 'Gabriel Chelles Product|UX|UI designer',
+  description: 'Portfolio de Gabriel Chelles contendo todos os seus projetos',
   applicationName: 'Gabriel Chelles Product Designer',
-  abstract: 'Portfolio de Gabriel Chelles contendo todos os seus projetos',
+  abstract: 'Gabriel Chelles Product|UX|UI designer',
   icons: {
     icon: {
       url: '/images/favicon.png',
