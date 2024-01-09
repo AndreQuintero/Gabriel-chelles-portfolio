@@ -2,7 +2,7 @@
 import { Container } from '@/app/components/container'
 import * as S from './style'
 import { ProjectsList } from '@/app/components/projects-list'
-import { ProjectProps } from '../home/projects/projects'
+import { ProjectProps } from '../home/projects'
 import { fadeIn } from '@/app/motion'
 
 export const Projects = ({ projects }: ProjectProps) => {
