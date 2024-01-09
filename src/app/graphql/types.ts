@@ -81,6 +81,16 @@ export type FooterData = {
   contact: ContactProps
 }
 
+export type NotFoundProps = {
+  notFounds: Array<NotFoundData>
+}
+
+export type NotFoundData = {
+  title?: string
+  text?: string
+  projects: Array<ProjectData>
+}
+
 export type ImageData = {
   description: string
   imagem: {

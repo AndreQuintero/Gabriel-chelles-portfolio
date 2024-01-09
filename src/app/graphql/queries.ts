@@ -156,3 +156,22 @@ export const FOOTER = gql`
     }
   }
 `
+
+export const NOT_FOUND = gql`
+  query notFound {
+    notFounds {
+      title
+      text
+      projects(last: ${limit}) {
+        slug
+        title
+        imagesThumb {
+          description
+          imagem {
+            url
+          }
+        }
+      }
+    }
+  }
+`
