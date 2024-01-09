@@ -35,9 +35,18 @@ export const metadata: Metadata = {
   description: 'Gabriel Chelles Product|UX|UI designer',
   applicationName: 'Gabriel Chelles Product Designer',
   abstract: 'Portfolio de Gabriel Chelles contendo todos os seus projetos',
+  icons: {
+    icon: {
+      url: '/images/favicon.png',
+      href: '/images/favicon.png'
+    }
+  },
   appleWebApp: {
     title: 'Gabriel Chelles Product Designer',
-    statusBarStyle: 'black-translucent'
+    statusBarStyle: 'black-translucent',
+    startupImage: {
+      url: '/images/favicon.png'
+    }
   },
   authors: {
     name: 'Gabriel Chelles'
