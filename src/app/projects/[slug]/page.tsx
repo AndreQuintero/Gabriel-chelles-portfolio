@@ -7,6 +7,7 @@ import { Goals } from '@/app/templates/project/goals'
 import { Hero } from '@/app/templates/project/hero'
 import { NextPageSession as NextPage } from '@/app/templates/project/next-page'
 import { Summary } from '@/app/templates/project/summary'
+import { notFound } from 'next/navigation'
 
 export const dynamicParams = false
 
@@ -19,6 +20,7 @@ export async function generateStaticParams() {
 
 const getCaseBySlug = async (slug: string) => {
   const data: CaseProps = await hygraph.request(CASE, { slug })
+  if (!data) notFound()
   return data.cases[0]
 }
 
@@ -47,7 +49,7 @@ export default async function Projects({
       <Goals goals={data.goals} results={data.results} />
       <Articles sectionArticles={data.sectionArticles} />
       <NextPage
-        color={data?.nextPage?.color.hex}
+        color={data.nextPage.color.hex}
         title={data.nextPage.project.title}
         slug={data.nextPage.project.slug}
         text={data.nextPage.textColor}
