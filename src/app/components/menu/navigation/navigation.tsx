@@ -29,7 +29,9 @@ export const Navigation = ({ isMobile }: NavigationProps) => {
           </S.Link>
         </li>
         <li onClick={closeMenuMobile}>
-          <S.Link href="#">Sobre</S.Link>
+          <S.Link href={Routes.ABOUT} $isActive={isActive(Routes.ABOUT)}>
+            Sobre
+          </S.Link>
         </li>
         {!isMobile && (
           <li>
