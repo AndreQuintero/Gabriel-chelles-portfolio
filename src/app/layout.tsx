@@ -115,7 +115,12 @@ export const metadata: Metadata = {
     description: 'Portfolio de Gabriel Chelles contendo todos os seus projetos',
     siteName: 'Gabriel Chelles Product Designer',
     title: 'Gabriel Chelles',
-    url: process.env.DOMAIN
+    url: process.env.DOMAIN,
+    images: [
+      {
+        url: 'https://media.graphassets.com/hn7hLJGGS5G3DAI9cauw'
+      }
+    ]
   },
 
   metadataBase: new URL(process.env.DOMAIN!)
