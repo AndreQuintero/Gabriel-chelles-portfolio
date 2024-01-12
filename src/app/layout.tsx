@@ -31,6 +31,7 @@ export const outfit = Outfit({
 })
 
 export const metadata: Metadata = {
+  metadataBase: new URL(process.env.DOMAIN!),
   title: 'Gabriel Chelles Product Designer',
   description: 'Portfolio de Gabriel Chelles contendo todos os seus projetos',
   applicationName: 'Gabriel Chelles Product Designer',
@@ -121,9 +122,7 @@ export const metadata: Metadata = {
         url: 'https://media.graphassets.com/hn7hLJGGS5G3DAI9cauw'
       }
     ]
-  },
-
-  metadataBase: new URL(process.env.DOMAIN!)
+  }
 }
 
 export const viewport: Viewport = {
@@ -147,6 +146,7 @@ export default async function RootLayout({
   return (
     <html lang="pt-br">
       <head>
+        <link rel="shortcut icon" href="/images/favicon.png" />
         <GoogleAnalytics />
         <Hotjar />
       </head>
