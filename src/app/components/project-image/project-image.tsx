@@ -51,6 +51,7 @@ const ProjectImage = ({ onMouseMove, images }: ProjectImageProps) => {
               style={{ objectFit: 'cover' }}
               src={img.url}
               alt={img.description}
+              loading="lazy"
             />
           </S.ImgWrapper>
         )

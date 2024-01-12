@@ -31,6 +31,7 @@ export const Hero = ({ title, picture, description = [] }: HeroProps) => {
               <S.Picture
                 src={picture.imagem.url}
                 alt={picture.description}
+                loading="lazy"
                 fill
               />
             </S.PictureWrapper>
