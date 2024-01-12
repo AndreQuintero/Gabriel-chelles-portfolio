@@ -10,7 +10,7 @@ export const TagsSlider = ({ tags }: TagsProps) => {
     arrows: false,
     dots: false,
     autoplay: true,
-
+    infinite: true,
     speed: 1000,
     slidesToShow: 3.5,
     slidesPerRow: 1,
