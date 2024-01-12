@@ -20,7 +20,7 @@ export const label = styled.label`
     font-weight: 400;
     transition: ${theme.transition};
     text-align: center;
-
+    white-space: nowrap;
     ${media.greaterThan('medium')`
         font-size: 1.6rem;
     `}
