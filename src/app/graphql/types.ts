@@ -91,6 +91,17 @@ export type NotFoundData = {
   projects: Array<ProjectData>
 }
 
+export type AboutProps = {
+  abouts: Array<AboutData>
+}
+
+export type AboutData = {
+  title?: string
+  description?: Array<string>
+  tags?: Array<string>
+  picture?: ImageData
+}
+
 export type ImageData = {
   description: string
   imagem: {

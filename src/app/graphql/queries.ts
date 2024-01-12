@@ -175,3 +175,19 @@ export const NOT_FOUND = gql`
     }
   }
 `
+
+export const ABOUT = gql`
+  query About {
+    abouts {
+      title
+      description
+      tags
+      picture {
+        description
+        imagem {
+          url
+        }
+      }
+    }
+  }
+`
