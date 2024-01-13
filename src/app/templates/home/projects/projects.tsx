@@ -11,22 +11,25 @@ import { useRouter } from 'next/navigation'
 
 export type ProjectProps = {
   projects: Array<ProjectCardProps>
+  totalProjects?: number
 }
 
-export const Projects = ({ projects }: ProjectProps) => {
+export const Projects = ({ projects, totalProjects }: ProjectProps) => {
   const router = useRouter()
-  const totalProjects = projects.length
+  const totalProjectsHome = projects.length
   return (
     <S.Wrapper>
       <Container>
         <ProjectsList projects={projects} />
-        <S.MoreProjects>
-          <Button
-            colorScheme="secondary"
-            onClick={() => router.push(Routes.PROJECTS)}>
-            Ver todos os {totalProjects} projetos
-          </Button>
-        </S.MoreProjects>
+        {!!totalProjects && totalProjects > totalProjectsHome && (
+          <S.MoreProjects>
+            <Button
+              colorScheme="secondary"
+              onClick={() => router.push(Routes.PROJECTS)}>
+              Ver todos os {totalProjects} projetos
+            </Button>
+          </S.MoreProjects>
+        )}
       </Container>
     </S.Wrapper>
   )

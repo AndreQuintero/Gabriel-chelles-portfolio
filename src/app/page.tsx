@@ -1,6 +1,6 @@
 import { hygraph } from './graphql/client'
-import { HOME } from './graphql/queries'
-import { HomeData, HomeProps } from './graphql/types'
+import { HOME, PROJECTS } from './graphql/queries'
+import { HomeData, HomeProps, ProjectsProps } from './graphql/types'
 import { convertProjectDataToProjectCardProps } from './services/project'
 import { Hero } from './templates/home/hero'
 import { Projects } from './templates/home/projects'
@@ -18,9 +18,16 @@ const getProjects = (data: HomeData) => {
   return convertProjectDataToProjectCardProps(data.projects)
 }
 
+const getTotalProjects = async () => {
+  const data: ProjectsProps = await hygraph.request(PROJECTS)
+  if (!data) return 0
+  return data.projects.length
+}
+
 export default async function Home() {
   const homeData = await getHomeData()
   const projectData = getProjects(homeData)
+  const totalProjects = await getTotalProjects()
 
   return (
     <main>
@@ -34,7 +41,7 @@ export default async function Home() {
         contact={homeData!.contact}
       />
       <Video url={homeData?.videoLink} />
-      <Projects projects={projectData} />
+      <Projects projects={projectData} totalProjects={totalProjects} />
     </main>
   )
 }
