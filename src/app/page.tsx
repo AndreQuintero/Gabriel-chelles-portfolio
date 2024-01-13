@@ -32,15 +32,15 @@ export default async function Home() {
   return (
     <main>
       <Hero
-        greeting={homeData?.greeting}
-        name={homeData?.name}
-        introductionStart={homeData?.introductionStart}
-        highlight={homeData?.highlight}
-        introductionEnd={homeData?.introductionEnd}
+        greeting={homeData.greeting}
+        name={homeData.name}
+        introductionStart={homeData.introductionStart}
+        highlight={homeData.highlight}
+        introductionEnd={homeData.introductionEnd}
         color={homeData.highlightColor.hex}
-        contact={homeData!.contact}
+        contact={homeData.contact}
       />
-      <Video url={homeData?.videoLink} />
+      <Video url={homeData.videoLink} />
       <Projects projects={projectData} totalProjects={totalProjects} />
     </main>
   )
