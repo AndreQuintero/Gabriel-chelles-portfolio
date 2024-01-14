@@ -102,6 +102,69 @@ export type AboutData = {
   picture?: ImageData
 }
 
+export type MetatagProps = {
+  metatags: Array<MetatagData>
+}
+
+export type MetatagData = {
+  abstract: string
+  title: string
+  description: string
+  keywords: Array<string>
+  applicationName: string
+  appleWebAppTitle: string
+  appleWebAppStatusBarStyle:
+    | 'default'
+    | 'black'
+    | 'black-translucent'
+    | undefined
+  appleWebAppStartupImage: {
+    url: string
+  }
+  authorName: string
+  authorUrl: string
+  creator: string
+  category: string
+  publisher: string
+  openGraphType:
+    | 'website'
+    | 'article'
+    | 'book'
+    | 'profile'
+    | 'music.song'
+    | 'music.album'
+    | 'music.playlist'
+    | 'music.radio_station'
+    | 'video.movie'
+    | 'video.episode'
+    | 'video.tv_show'
+    | 'video.other'
+    | undefined
+  openGraphDescription: string
+  openGraphSiteName: string
+  openGraphTitle: string
+  openGraphCountryName: string
+  openGraphEmails: Array<string>
+  openGraphImage: {
+    url: string
+  }
+  maskIconColor: string
+  maskIcon: {
+    url: string
+  }
+  generator: string
+  icons: Array<IconData>
+  viewportColor: ColorData
+}
+
+export type IconData = {
+  sizes: string
+  type: string
+  icon: {
+    url: string
+  }
+}
+
 export type ImageData = {
   description: string
   imagem: {

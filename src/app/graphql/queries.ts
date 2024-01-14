@@ -191,3 +191,49 @@ export const ABOUT = gql`
     }
   }
 `
+
+export const METATAGS = gql`
+  query metatags {
+    metatags {
+      abstract
+      title
+      description
+      keywords
+      applicationName
+      appleWebAppTitle
+      appleWebAppStatusBarStyle
+      appleWebAppStartupImage {
+        url
+      }
+      authorName
+      authorUrl
+      creator
+      category
+      publisher
+      openGraphType
+      openGraphDescription
+      openGraphSiteName
+      openGraphTitle
+      openGraphCountryName
+      openGraphEmails
+      openGraphImage {
+        url
+      }
+      maskIconColor
+      maskIcon {
+        url
+      }
+      generator
+      icons {
+        sizes
+        type
+        icon {
+          url
+        }
+      }
+      viewportColor {
+        hex
+      }
+    }
+  }
+`
