@@ -1,15 +1,19 @@
 import { hygraph } from '@/app/graphql/client'
 import { CASE, PROJECTS } from '@/app/graphql/queries'
 import { CaseProps, ProjectsProps } from '@/app/graphql/types'
+import { getMetaData } from '@/app/services/metadata'
 import { Articles, ArticlesProps } from '@/app/templates/project/articles'
 import { Banner } from '@/app/templates/project/banner'
 import { Goals } from '@/app/templates/project/goals'
 import { Hero } from '@/app/templates/project/hero'
 import { NextPageSession as NextPage } from '@/app/templates/project/next-page'
 import { Summary } from '@/app/templates/project/summary'
+import { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 
 export const dynamicParams = false
+
+export const generateMetadata = async (): Promise<Metadata> => getMetaData()
 
 export async function generateStaticParams() {
   const data: ProjectsProps = await hygraph.request(PROJECTS)

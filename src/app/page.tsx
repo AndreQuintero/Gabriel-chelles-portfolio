@@ -1,3 +1,4 @@
+import { Metadata } from 'next'
 import { hygraph } from './graphql/client'
 import { HOME, PROJECTS } from './graphql/queries'
 import { HomeData, HomeProps, ProjectsProps } from './graphql/types'
@@ -5,8 +6,11 @@ import { convertProjectDataToProjectCardProps } from './services/project'
 import { Hero } from './templates/home/hero'
 import { Projects } from './templates/home/projects'
 import { Video } from './templates/home/video'
+import { getMetaData } from './services/metadata'
 
 export const revalidate = process.env.REVALIDATE_TIME
+
+export const generateMetadata = async (): Promise<Metadata> => getMetaData()
 
 const getHomeData = async () => {
   const data: HomeProps = await hygraph.request(HOME)
