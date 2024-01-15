@@ -4,10 +4,11 @@ import * as S from './style'
 import { List } from '@/app/components/list'
 import { TextGrid } from '@/app/components/text-grid'
 import { fadeIn } from '@/app/motion'
+import { RichTextEditorData } from '@/app/graphql/types'
 
 type GoalsProps = {
   goals: Array<string>
-  results: Array<string>
+  results: Array<RichTextEditorData>
 }
 
 export const Goals = ({ goals, results }: GoalsProps) => {
