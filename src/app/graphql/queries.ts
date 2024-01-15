@@ -82,7 +82,9 @@ export const CASE = gql`
       myRole
       projectYear
       goals
-      results
+      results {
+        html
+      }
       sectionArticles(last: ${limit}) {
         sectionType
         articles(last: ${limit}) {

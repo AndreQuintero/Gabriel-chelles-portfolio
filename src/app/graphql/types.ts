@@ -55,7 +55,7 @@ export type CaseData = {
   myRole: string
   projectYear: string
   goals: Array<string>
-  results: Array<string>
+  results: Array<RichTextEditorData>
   sectionArticles: Array<SectionArticleData>
   nextPage: {
     project: ProjectData
@@ -163,6 +163,10 @@ export type IconData = {
   icon: {
     url: string
   }
+}
+
+export type RichTextEditorData = {
+  html: string
 }
 
 export type ImageData = {
