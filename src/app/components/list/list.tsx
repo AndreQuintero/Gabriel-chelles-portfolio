@@ -1,9 +1,11 @@
 import { fadeIn } from '@/app/motion'
 import * as S from './style'
-import { Markdown } from '../markdown'
+
+import { RichTextEditorData } from '@/app/graphql/types'
+import { RichTextEditor } from '../rich-text-editor'
 
 type ListProps = {
-  items: Array<string>
+  items: Array<string | RichTextEditorData>
   space?: 'small' | 'large'
 }
 
@@ -16,7 +18,7 @@ export const List = ({ items, space = 'large' }: ListProps) => {
       viewport={{ once: true }}>
       {items.map((item, index) => (
         <S.Item $space={space} key={`${item}-${index}`}>
-          <Markdown item={item} />
+          <RichTextEditor item={item} />
         </S.Item>
       ))}
     </S.List>
