@@ -1,5 +1,6 @@
 import { fadeIn } from '@/app/motion'
 import * as S from './style'
+import { Markdown } from '../markdown'
 
 type ListProps = {
   items: Array<string>
@@ -15,7 +16,7 @@ export const List = ({ items, space = 'large' }: ListProps) => {
       viewport={{ once: true }}>
       {items.map((item, index) => (
         <S.Item $space={space} key={`${item}-${index}`}>
-          {item}
+          <Markdown item={item} />
         </S.Item>
       ))}
     </S.List>
