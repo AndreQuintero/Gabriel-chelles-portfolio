@@ -4,13 +4,14 @@ import { Container } from '../container'
 import { TextGrid } from '../text-grid'
 import { ArticleGridType } from '@/app/templates/project/articles'
 import { fadeIn } from '@/app/motion'
-import { ImageData } from '@/app/graphql/types'
+import { ImageData, RichTextEditorData } from '@/app/graphql/types'
+import { RichTextEditor } from '../rich-text-editor'
 
 export type ArticleProps = {
   title?: string
-  introduction?: Array<string>
-  items?: Array<string>
-  conclusion?: Array<string>
+  introduction?: Array<RichTextEditorData>
+  items?: Array<RichTextEditorData>
+  conclusion?: Array<RichTextEditorData>
   images?: Array<ImageArticleProps>
   gridType?: ArticleGridType
   showcases?: Array<ImageArticleProps>
@@ -52,7 +53,9 @@ export const Article = ({
               viewport={{ once: true }}
               $gridtype={gridType}>
               {introduction?.map((intro, index) => (
-                <S.Text key={`${intro}-${index}`}>{intro}</S.Text>
+                <S.Text key={`${intro}-${index}`}>
+                  <RichTextEditor item={intro} />
+                </S.Text>
               ))}
             </S.TextWrapper>
           )}
@@ -69,7 +72,9 @@ export const Article = ({
               viewport={{ once: true }}
               $gridtype={gridType}>
               {conclusion.map((text, index) => (
-                <S.Text key={`${text}-${index}`}>{text}</S.Text>
+                <S.Text key={`${text}-${index}`}>
+                  <RichTextEditor item={text} />{' '}
+                </S.Text>
               ))}
             </S.TextWrapper>
           )}

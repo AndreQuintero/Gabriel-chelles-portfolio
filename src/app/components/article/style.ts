@@ -38,10 +38,11 @@ export const Title = styled(motion.h3)<Grid>`
   `}
 `
 
-export const TextWrapper = styled(motion.div)<Grid>`
-  ${({ $gridtype }) => css`
+export const TextWrapper = styled(motion.div)<Grid & { $hasGap?: boolean }>`
+  ${({ $gridtype, $hasGap }) => css`
     ${media.greaterThan('medium')`
       ${variants[$gridtype]};
+      ${!!$hasGap && 'margin-top: 1.6rem;'};
     `}
   `}
 `
