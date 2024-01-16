@@ -47,7 +47,8 @@ export const TextWrapper = styled(motion.div)<Grid & { $hasGap?: boolean }>`
   `}
 `
 
-export const Text = styled.p`
+// in the begging was a P tag, but because of the cms format, i had to change to a div tag
+export const Text = styled.div`
   ${({ theme }) => css`
     font-family: ${theme.fonts.style.secondary};
     font-size: 1.4rem;
