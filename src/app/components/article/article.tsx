@@ -73,7 +73,7 @@ export const Article = ({
               $gridtype={gridType}>
               {conclusion.map((text, index) => (
                 <S.Text key={`${text}-${index}`}>
-                  <RichTextEditor item={text} />{' '}
+                  <RichTextEditor item={text} />
                 </S.Text>
               ))}
             </S.TextWrapper>
