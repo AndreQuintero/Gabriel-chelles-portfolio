@@ -89,9 +89,15 @@ export const CASE = gql`
         sectionType
         articles(last: ${limit}) {
           title
-          introduction
-          items
-          conclusion
+          introduction{
+            html
+          }
+          items{
+            html
+          }
+          conclusion{
+            html
+          }
           images {
             fullWidth
             image {

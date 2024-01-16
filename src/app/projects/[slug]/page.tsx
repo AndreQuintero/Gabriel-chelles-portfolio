@@ -24,7 +24,7 @@ export async function generateStaticParams() {
 
 const getCaseBySlug = async (slug: string) => {
   const data: CaseProps = await hygraph.request(CASE, { slug })
-  if (!data) notFound()
+  if (!data || data.cases.length === 0) notFound()
   return data.cases[0]
 }
 
