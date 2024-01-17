@@ -61,6 +61,7 @@ export const Link = styled.a`
     font-family: ${theme.fonts.style.secondary};
     font-size: 1.4rem;
     font-weight: 400;
+    width: fit-content;
     color: ${theme.colors.secondary};
     text-decoration-line: underline;
     ${media.greaterThan('medium')`
