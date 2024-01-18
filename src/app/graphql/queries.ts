@@ -46,7 +46,7 @@ export const HOME = gql`
 `
 export const PROJECTS = gql`
   query Projects {
-    projects(last: ${limit}) {
+    projects(last: ${limit}, orderBy: publishedAt_DESC) {
       id
       slug
       title
