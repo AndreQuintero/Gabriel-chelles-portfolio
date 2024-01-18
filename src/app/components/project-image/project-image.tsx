@@ -12,7 +12,7 @@ type ProjectImageProps = {
 const ProjectImage = ({ onMouseMove, images }: ProjectImageProps) => {
   const [activeIndex, setActiveIndex] = useState(0)
   const intervalRef = useRef<NodeJS.Timeout | null>(null)
-  const SCREEN_TIME = 500
+  const SCREEN_TIME = 800
 
   const handleImagesWhenHoverit = () => {
     intervalRef.current = setInterval(() => {
