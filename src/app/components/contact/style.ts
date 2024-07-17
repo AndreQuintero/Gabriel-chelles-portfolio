@@ -29,7 +29,7 @@ export const Email = styled.h1`
         font-size: 6rem;
     `}
     &:hover {
-      color: #308cf4;
+      color: #ee1848;
     }
   `}
 `
