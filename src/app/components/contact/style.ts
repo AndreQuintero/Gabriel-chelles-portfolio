@@ -16,7 +16,7 @@ export const Greetings = styled.h2`
   `}
 `
 
-export const Email = styled.h1<{ color: string }>`
+export const Email = styled.h1<{ color?: string }>`
   ${({ theme, color }) => css`
     margin-top: 0.8rem;
     font-family: ${theme.fonts.style.secondary};
@@ -29,7 +29,7 @@ export const Email = styled.h1<{ color: string }>`
         font-size: 6rem;
     `}
     &:hover {
-      color: ${color};
+      color: ${!!color && color} ?? 'none';
     }
   `}
 `
