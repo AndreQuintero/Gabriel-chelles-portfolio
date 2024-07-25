@@ -29,7 +29,7 @@ export const Email = styled.h1<{ color?: string }>`
         font-size: 6rem;
     `}
     &:hover {
-      color: ${!!color && color} ?? 'none';
+      color: ${!!color ? color : 'none'};
     }
   `}
 `
