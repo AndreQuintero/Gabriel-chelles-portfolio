@@ -22,6 +22,7 @@ export type ContactProps = {
     url: string
   }
   linkedin: LinkData
+  emailHover?: ColorData
 }
 
 export type HomeProps = {

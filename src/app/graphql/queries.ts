@@ -29,6 +29,9 @@ export const HOME = gql`
           link
           text
         }
+        emailHover {
+          hex
+        }
       }
       projects(last: ${limit}) {
         id
@@ -159,6 +162,9 @@ export const FOOTER = gql`
         linkedin {
           link
           text
+        }
+        emailHover {
+          hex
         }
       }
     }
