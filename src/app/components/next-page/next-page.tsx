@@ -14,7 +14,7 @@ export const NextPage = ({
     <Link href={`${Routes.PROJECTS}/${slug}`}>
       <S.Wrapper $text={text!} $color={color}>
         <S.TextWrapper>
-          <S.SubTitle>Próximo projeto</S.SubTitle>
+          <S.SubTitle>Next Project</S.SubTitle>
           <S.Title>{title}</S.Title>
         </S.TextWrapper>
         <S.ImageWrapper>
