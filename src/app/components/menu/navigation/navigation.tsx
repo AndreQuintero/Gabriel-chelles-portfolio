@@ -25,18 +25,18 @@ export const Navigation = ({ isMobile }: NavigationProps) => {
         )}
         <li onClick={closeMenuMobile}>
           <S.Link href={Routes.PROJECTS} $isActive={isActive(Routes.PROJECTS)}>
-            Projetos
+            Projects
           </S.Link>
         </li>
         <li onClick={closeMenuMobile}>
           <S.Link href={Routes.ABOUT} $isActive={isActive(Routes.ABOUT)}>
-            Sobre
+            About
           </S.Link>
         </li>
         {!isMobile && (
           <li>
             <S.Link href="#contact" $isActive={false}>
-              Contato
+              Contact
             </S.Link>
           </li>
         )}
