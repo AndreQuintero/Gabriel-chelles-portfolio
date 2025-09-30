@@ -42,7 +42,7 @@ export const WithCustomCursor = <P extends CustomCursor>(
     return (
       <S.Wrapper>
         <S.Cursor ref={cursor}>
-          <label> Ver mais </label>
+          <label> See more </label>
         </S.Cursor>
         <Component {...(props as P)} onMouseMove={mouseMove} />
       </S.Wrapper>
