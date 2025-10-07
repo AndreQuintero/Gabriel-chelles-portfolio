@@ -14,7 +14,7 @@ export const Projects = ({ projects }: ProjectProps) => {
           initial="hidden"
           whileInView="show"
           viewport={{ once: true }}>
-          Projetos
+          Projects
         </S.Title>
         <ProjectsList projects={projects} />
       </Container>
