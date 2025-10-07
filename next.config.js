@@ -10,6 +10,12 @@ const nextConfig = {
       },
       {
         protocol: 'https',
+        hostname: 'sa-east-1.graphassets.com',
+        port: '',
+        pathname: '**'
+      },
+      {
+        protocol: 'https',
         hostname: 'media.graphassets.com',
         port: '',
         pathname: '**'
