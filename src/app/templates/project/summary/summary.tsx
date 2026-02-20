@@ -29,7 +29,7 @@ export const Summary = ({ description, myRole, projectYear }: SummaryProps) => {
                 initial="hidden"
                 whileInView="show"
                 viewport={{ once: true }}>
-                Minha função
+                My role
               </S.Title>
               <S.Information
                 variants={fadeIn(0.2)}
@@ -45,7 +45,7 @@ export const Summary = ({ description, myRole, projectYear }: SummaryProps) => {
                 initial="hidden"
                 whileInView="show"
                 viewport={{ once: true }}>
-                Ano do projeto
+                Project year
               </S.Title>
               <S.Information
                 variants={fadeIn(0.2)}
