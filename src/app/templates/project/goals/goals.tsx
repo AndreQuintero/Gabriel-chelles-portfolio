@@ -22,7 +22,7 @@ export const Goals = ({ goals, results }: GoalsProps) => {
               initial="hidden"
               whileInView="show"
               viewport={{ once: true }}>
-              Objetivos
+              Goals
             </S.Title>
             <List space="small" items={goals} />
           </S.Details>
@@ -32,7 +32,7 @@ export const Goals = ({ goals, results }: GoalsProps) => {
               initial="hidden"
               whileInView="show"
               viewport={{ once: true }}>
-              Resultados
+              Results
             </S.Title>
             <List space="small" items={results} />
           </S.Details>
